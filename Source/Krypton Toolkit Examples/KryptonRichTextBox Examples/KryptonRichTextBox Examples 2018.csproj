@@ -12,7 +12,7 @@
     <RootNamespace>KryptonRichTextBoxExamples</RootNamespace>
     <AssemblyName>Krypton Rich TextBox Examples</AssemblyName>
     <ApplicationIcon>Krypton.ico</ApplicationIcon>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
