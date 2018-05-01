@@ -54,7 +54,7 @@ namespace KryptonToolkitUpdater.UI
 
         private void kllHelp_LinkClicked(object sender, System.EventArgs e)
         {
-            KryptonMessageBox.Show("This utility will enable you to check for and download updates for Krypton .NET 4.71.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show("This utility will enable you to check for and download updates for Krypton .NET 4.72.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

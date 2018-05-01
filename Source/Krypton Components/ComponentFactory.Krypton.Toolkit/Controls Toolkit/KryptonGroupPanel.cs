@@ -23,7 +23,7 @@ namespace ComponentFactory.Krypton.Toolkit
 	[ToolboxItem(false)]
 	[DesignerCategory("code")]
     [ToolboxBitmap(typeof(KryptonGroupPanel), "ToolboxBitmaps.KryptonGroupPanel.bmp")]
-    [Designer("ComponentFactory.Krypton.Toolkit.KryptonGroupPanelDesigner, ComponentFactory.Krypton.Design, Version=4.71.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e")]
+    [Designer("ComponentFactory.Krypton.Toolkit.KryptonGroupPanelDesigner, ComponentFactory.Krypton.Design, Version=4.72.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e")]
     [Description("Enables you to group collections of controls.")]
     [Docking(DockingBehavior.Never)]
     [ClassInterface(ClassInterfaceType.AutoDispatch)]

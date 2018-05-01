@@ -24,7 +24,7 @@ namespace ComponentFactory.Krypton.Ribbon
     /// </summary>
     [ToolboxItem(false)]
     [ToolboxBitmap(typeof(KryptonRibbonGroupMaskedTextBox), "ToolboxBitmaps.KryptonRibbonGroupMaskedTextBox.bmp")]
-    [Designer("ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupMaskedTextBoxDesigner, ComponentFactory.Krypton.Design, Version=4.71.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e")]
+    [Designer("ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupMaskedTextBoxDesigner, ComponentFactory.Krypton.Design, Version=4.72.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e")]
     [DesignerCategory("code")]
     [DesignTimeVisible(false)]
     [DefaultEvent("TextChanged")]
