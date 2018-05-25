@@ -38,7 +38,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Binaries\Versions\4.7.20\Krypton Toolkit Examples\</OutputPath>
+    <OutputPath>..\..\..\Binaries\Versions\4.72\Krypton Toolkit Examples\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -54,9 +54,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\..\Bin\Krypton Design.dll</HintPath>
-    </Reference>
     <Reference Include="Krypton Toolkit">
       <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
     </Reference>

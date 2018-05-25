@@ -56,12 +56,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\..\Bin\Krypton Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Docking">
-      <HintPath>..\..\..\Bin\Krypton Docking.dll</HintPath>
-    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>..\..\..\Bin\Krypton Navigator.dll</HintPath>
     </Reference>
@@ -71,7 +65,7 @@
     <Reference Include="Krypton Toolkit">
       <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Workspace, Version=4.7.20.553.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Workspace, Version=4.72.553.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Bin\Krypton Workspace.dll</HintPath>
     </Reference>

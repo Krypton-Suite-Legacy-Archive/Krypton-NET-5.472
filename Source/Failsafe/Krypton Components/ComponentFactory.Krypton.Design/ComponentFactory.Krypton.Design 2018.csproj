@@ -50,11 +50,11 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>build\Debug\Failsafe\</OutputPath>
+    <OutputPath>..\..\..\..\..\Binaries\Versions\4.72\Krypton Core Components\Failsafe\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>build\Debug\Failsafe\ComponentFactory.Krypton.Design.xml</DocumentationFile>
+    <DocumentationFile>..\..\..\..\..\Binaries\Versions\4.72\Krypton Core Components\Failsafe\ComponentFactory.Krypton.Design.xml</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>

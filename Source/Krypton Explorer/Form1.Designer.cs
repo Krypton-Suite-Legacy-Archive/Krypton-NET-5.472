@@ -165,9 +165,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelFill)).BeginInit();
             this.kryptonPanelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator)).BeginInit();
+            this.kryptonNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPageToolkit)).BeginInit();
             this.kryptonPageToolkit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigatorToolkit)).BeginInit();
+            this.kryptonNavigatorToolkit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
             this.kryptonPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
@@ -1781,7 +1783,7 @@
             this.labelKryptonExplorer.StateCommon.ShortText.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKryptonExplorer.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.labelKryptonExplorer.TabIndex = 0;
-            this.labelKryptonExplorer.Values.ExtraText = "Built for .Net 4.7.1";
+            this.labelKryptonExplorer.Values.ExtraText = "Built for .Net 4.7";
             this.labelKryptonExplorer.Values.Text = "Krypton 4.72";
             // 
             // pictureBoxRight
@@ -1831,10 +1833,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelFill)).EndInit();
             this.kryptonPanelFill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator)).EndInit();
+            this.kryptonNavigator.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPageToolkit)).EndInit();
             this.kryptonPageToolkit.ResumeLayout(false);
             this.kryptonPageToolkit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigatorToolkit)).EndInit();
+            this.kryptonNavigatorToolkit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
             this.kryptonPage1.ResumeLayout(false);
             this.kryptonPage1.PerformLayout();
