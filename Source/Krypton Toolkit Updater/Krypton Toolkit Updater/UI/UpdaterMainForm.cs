@@ -37,12 +37,29 @@ namespace KryptonToolkitUpdater.UI
 
         private void kbtnCancel_Click(object sender, EventArgs e)
         {
+            ExitApplication();
+        }
 
+        private void ExitApplication()
+        {
+            if (_checkingForUpdates)
+            {
+                DialogResult result = KryptonMessageBox.Show("Checking for updates. Do you want to quit now?", "Update in Progress", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void kbtnCheckForUpdates_Click(object sender, EventArgs e)
         {
-            CheckForUpdates("https://github.com/Wagnerp/Krypton-NET-4.72/blob/master/Updates/update.xml");
+            CheckForUpdates("https://github.com/Wagnerp/Krypton-NET-4.70/blob/master/Updates/update.xml");
         }
 
         private void kbtnOptions_Click(object sender, EventArgs e)
@@ -111,7 +128,7 @@ namespace KryptonToolkitUpdater.UI
 
         private void kllHelp_LinkClicked(object sender, System.EventArgs e)
         {
-            KryptonMessageBox.Show("This utility will enable you to check for and download updates for Krypton .NET 4.72.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show("This utility will enable you to check for and download updates for Krypton .NET 4.70.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void kbtnDownloadUpdate_Click(object sender, EventArgs e)

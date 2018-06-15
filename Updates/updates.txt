@@ -1,3 +1,21 @@
+## 2018-06-11 Version 620
+* Build 620 (build date Monday 11th June 2018) is now obtainable through the `releases` tab.
+* Fixed references that blocked demo applications from launching.
+* Start work on getting the system themes to display the extras. 
+  * Not perfect but at least the "Chrome" displays the intended buttons and text(s).
+* Removal of "not needed" casts.
+
+=======
+
+## 2018-05-25 Version 593
+* Build 593 (build date Friday 25th May 2018) is now available through the `releases` tab.
+* Remove the Designer dll (Project / code moved in Git)
+* Place designers into actual dlls (Small size increase)
+* Fix fallout from Designer dll removal from other projects
+  * Fix build path output, and Demo Apps Ref path import and Output
+
+=======
+
 ## 2018-04-29 Build 572
 * Build 572 (build date Sunday 29th April 2018) is now obtainable through the `releases` tab.
 

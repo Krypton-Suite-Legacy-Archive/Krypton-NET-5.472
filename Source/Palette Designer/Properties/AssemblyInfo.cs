@@ -17,9 +17,9 @@ using System.Security.Permissions;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("4.72.6002.0")]
-[assembly: AssemblyFileVersion("4.72.6002.0")]
-[assembly: AssemblyInformationalVersion("4.5.2.0")]
+[assembly: AssemblyVersion("4.72.6006.0")]
+[assembly: AssemblyFileVersion("4.72.6006.0")]
+[assembly: AssemblyInformationalVersion("4.5.6.0")]
 [assembly: AssemblyCopyright("© Component Factory Pty Ltd 2012. All rights reserved.")]
 [assembly: AssemblyProduct("Palette Designer")]
 [assembly: AssemblyDefaultAlias("PaletteDesigner.dll")]
