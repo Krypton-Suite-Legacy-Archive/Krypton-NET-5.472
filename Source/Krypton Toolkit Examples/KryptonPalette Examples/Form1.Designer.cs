@@ -1030,7 +1030,7 @@ namespace KryptonPaletteExamples
             this.btnExport.Location = new System.Drawing.Point(12, 435);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(114, 43);
-            this.btnExport.TabIndex = 12;
+            this.btnExport.TabIndex = 14;
             this.btnExport.Text = "Export Custom Palette";
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
