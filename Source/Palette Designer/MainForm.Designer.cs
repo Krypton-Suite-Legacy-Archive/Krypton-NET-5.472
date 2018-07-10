@@ -1592,7 +1592,7 @@ namespace PaletteDesigner
             // buttonSpecAny35
             // 
             this.buttonSpecAny35.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.FormMax;
-            this.buttonSpecAny35.UniqueName = "2161BA5EA78E40872161BA5EA78E4087";
+            this.buttonSpecAny35.UniqueName = "2161BA5EA78E4087261BA5EA78E4087";
             // 
             // buttonSpecAny36
             // 

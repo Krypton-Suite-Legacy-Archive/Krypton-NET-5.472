@@ -6,6 +6,12 @@
 
 =======
 
+## 2018-07-10 Build 622
+* Build 622 (build date Tuesday 10th July 2018) is now available through the `releases` tab.
+* Includes least code from the 4.70 codebase.
+
+=======
+
 ## 2018-06-15 Version 620
 * Build 620 (build date Friday 15th June 2018) is now available through the `releases` tab.
 * Signed the installer with certificate.

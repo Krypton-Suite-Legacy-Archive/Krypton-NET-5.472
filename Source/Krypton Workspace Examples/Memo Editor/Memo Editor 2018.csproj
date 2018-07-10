@@ -57,17 +57,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Krypton Navigator">
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.721\Krypton Navigator.dll</HintPath>
+      <HintPath>..\..\..\Bin\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Ribbon">
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.721\Krypton Ribbon.dll</HintPath>
+      <HintPath>..\..\..\Bin\Krypton Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit">
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.721\Krypton Toolkit.dll</HintPath>
+      <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Workspace, Version=4.721.553.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Workspace, Version=4.72.553.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.721\Krypton Workspace.dll</HintPath>
+      <HintPath>..\..\..\Bin\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />

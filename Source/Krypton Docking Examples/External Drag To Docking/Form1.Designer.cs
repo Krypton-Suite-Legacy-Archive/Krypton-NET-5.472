@@ -60,7 +60,7 @@
             // 
             // 
             // 
-            this.kryptonDockableWorkspace.Root.UniqueName = "6C9A3354441646DC46BF0E62E96721F3";
+            this.kryptonDockableWorkspace.Root.UniqueName = "6C9A3354441646DC46BF0E62E9672F3";
             this.kryptonDockableWorkspace.Root.WorkspaceControl = this.kryptonDockableWorkspace;
             this.kryptonDockableWorkspace.ShowMaximizeButton = false;
             this.kryptonDockableWorkspace.Size = new System.Drawing.Size(749, 520);

@@ -11,9 +11,9 @@
 
 using System.Reflection;
 
-[assembly: AssemblyVersion("4.721.0.0")]
-[assembly: AssemblyFileVersion("4.721.564.0")]
-[assembly: AssemblyInformationalVersion("4.721.564.0")]
+[assembly: AssemblyVersion("4.72.0.0")]
+[assembly: AssemblyFileVersion("4.72.564.0")]
+[assembly: AssemblyInformationalVersion("4.72.564.0")]
 [assembly: AssemblyCopyright("© Component Factory Pty Ltd, 2006-2018. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2017-2018. All rights reserved.")]
 [assembly: AssemblyProduct("Krypton Design")]
 [assembly: AssemblyDefaultAlias("ComponentFactory.Krypton.Design.dll")]
