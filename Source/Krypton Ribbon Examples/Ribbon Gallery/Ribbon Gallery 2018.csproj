@@ -56,11 +56,11 @@
   <ItemGroup>
     <Reference Include="Krypton Ribbon, Version=4.72.552.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Bin\Krypton Ribbon.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.72\Krypton Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit, Version=4.72.569.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.72\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />

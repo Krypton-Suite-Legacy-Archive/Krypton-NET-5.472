@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F67C205D-71D9-43A8-B582-83A675F8EF3A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TestClipBase</RootNamespace>
+    <RootNamespace>Test_Clip_Base</RootNamespace>
     <AssemblyName>Test Clip Base</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.72\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

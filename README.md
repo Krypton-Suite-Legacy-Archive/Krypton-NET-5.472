@@ -1,8 +1,23 @@
-# <img src="https://rawgit.com/Wagnerp/Krypton-NET-4.7/master/Help/Output/Logo.PNG">-NET-4.72
+# <img src=https://github.com/Wagnerp/Krypton-NET-4.72/blob/master/Assets/PNG/Square%20Design/Main%20Icon/64%20x%2064/Square%20Design%2064%20x%2064%20New%20Green.png">-NET-4.72
 
 =======
 
 # ["Toolkit help index"](https://rawgit.com/Wagnerp/Krypton-NET-4.7/master/Help/Output/index.html)
+
+=======
+
+## 2018-09-25 Build 643
+* Build 643 (build date Tuesday 25th September, 2018) is now available through the **releases** tab
+* Allow the developer to override the `Ctrl+c to copy` text in the Caption
+* The `Import()` and `Export()` methods will now use the native `KryptonMessageBox` instead of a system one
+* Removed the phantom `KryptonPalette` component
+* Now you can access the full `FilePath` of the loaded palette XML file
+* New icon (not propagated through all the example applications yet)
+* Fix KryptonForm does not respect Minimum Size set in designer #57
+  * And sort out some spelling mistakes in the `VisualForm.cs`
+* `SeparatorController.cs` & `DragObject` bug fix, #79
+  * Fix for bug Issue, #79, courtesy of [James Simms](https://github.com/jwsimms)
+* General bugfixes
 
 =======
 

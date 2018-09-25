@@ -6,7 +6,7 @@
 //  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2018. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-4.72)
-//  Version 4.72.0.0  www.ComponentFactory.com
+//  Version 4.7.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
 using System;
@@ -18,6 +18,9 @@ using System.Windows.Forms;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class KryptonProfessionalRenderer : ToolStripProfessionalRenderer
     {
         #region Instance Fields

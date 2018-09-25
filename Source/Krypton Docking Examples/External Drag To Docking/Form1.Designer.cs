@@ -52,15 +52,15 @@
             // kryptonDockableWorkspace
             // 
             this.kryptonDockableWorkspace.AutoHiddenHost = false;
-            this.kryptonDockableWorkspace.CompactFlags = ((ComponentFactory.Krypton.Workspace.CompactFlags)(((ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptyCells | ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptySequences)
-                        | ComponentFactory.Krypton.Workspace.CompactFlags.PromoteLeafs)));
+            this.kryptonDockableWorkspace.CompactFlags = ((ComponentFactory.Krypton.Workspace.CompactFlags)(((ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptyCells | ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptySequences) 
+            | ComponentFactory.Krypton.Workspace.CompactFlags.PromoteLeafs)));
             this.kryptonDockableWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonDockableWorkspace.Location = new System.Drawing.Point(0, 0);
             this.kryptonDockableWorkspace.Name = "kryptonDockableWorkspace";
             // 
             // 
             // 
-            this.kryptonDockableWorkspace.Root.UniqueName = "6C9A3354441646DC46BF0E62E9672F3";
+            this.kryptonDockableWorkspace.Root.UniqueName = "6C9A3354441646DC46BF0E62E96721F3";
             this.kryptonDockableWorkspace.Root.WorkspaceControl = this.kryptonDockableWorkspace;
             this.kryptonDockableWorkspace.ShowMaximizeButton = false;
             this.kryptonDockableWorkspace.Size = new System.Drawing.Size(749, 520);
