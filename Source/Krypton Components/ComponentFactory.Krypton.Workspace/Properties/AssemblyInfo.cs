@@ -1,12 +1,12 @@
 ﻿// *****************************************************************************
 // BSD 3-Clause License (https://github.com/ComponentFactory/Krypton/blob/master/LICENSE)
-//  © Component Factory Pty Ltd, 2006-2018, All rights reserved.
+//  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
 //  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
 // 
-//  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2018. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-4.72)
-//  Version 4.7.0.0  www.ComponentFactory.com
+//  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
+//  Version 5.472.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
 using System;
@@ -16,10 +16,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security;
 
-[assembly: AssemblyVersion("4.72.592.0")]
-[assembly: AssemblyFileVersion("4.72.592.0")]
-[assembly: AssemblyInformationalVersion("4.72.592.0")]
-[assembly: AssemblyCopyright("© Component Factory Pty Ltd, 2006-2018. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2017-2018. All rights reserved.")]
+[assembly: AssemblyVersion("5.472.601.0")]
+[assembly: AssemblyFileVersion("5.472.601.0")]
+[assembly: AssemblyInformationalVersion("5.472.601.0")]
+[assembly: AssemblyCopyright("© Component Factory Pty Ltd, 2006-2019. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2017-2019. All rights reserved.")]
 [assembly: AssemblyProduct("Krypton Workspace")]
 [assembly: AssemblyDefaultAlias("ComponentFactory.Krypton.Workspace.dll")]
 [assembly: AssemblyTitle("ComponentFactory.Krypton.Workspace")]

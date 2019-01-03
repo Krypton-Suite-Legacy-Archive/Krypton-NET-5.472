@@ -1782,12 +1782,12 @@
             this.labelKryptonExplorer.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.labelKryptonExplorer.Location = new System.Drawing.Point(17, 54);
             this.labelKryptonExplorer.Name = "labelKryptonExplorer";
-            this.labelKryptonExplorer.Size = new System.Drawing.Size(276, 28);
+            this.labelKryptonExplorer.Size = new System.Drawing.Size(265, 28);
             this.labelKryptonExplorer.StateCommon.ShortText.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKryptonExplorer.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.labelKryptonExplorer.TabIndex = 0;
-            this.labelKryptonExplorer.Values.ExtraText = "Built for .Net 4.7.2";
-            this.labelKryptonExplorer.Values.Text = "Krypton 4.72";
+            this.labelKryptonExplorer.Values.ExtraText = "Built for .Net 4.7";
+            this.labelKryptonExplorer.Values.Text = "Krypton 5.472";
             // 
             // pictureBoxRight
             // 
@@ -1836,7 +1836,7 @@
             // tslVersion
             // 
             this.tslVersion.Name = "tslVersion";
-            this.tslVersion.Size = new System.Drawing.Size(649, 17);
+            this.tslVersion.Size = new System.Drawing.Size(618, 17);
             this.tslVersion.Spring = true;
             this.tslVersion.Text = "Version: {0}";
             this.tslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

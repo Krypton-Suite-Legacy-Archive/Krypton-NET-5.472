@@ -1,11 +1,11 @@
 ﻿// *****************************************************************************
 // 
-//  © Component Factory Pty Ltd 2012. All rights reserved.
+//  © Component Factory Pty Ltd 2012 - 2019 - 2019. All rights reserved.
 //	The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, PO Box 1504, 
 //  Glen Waverley, Vic 3150, Australia and are supplied subject to licence terms.
 // 
-//  Version 4.72.0.0 	www.ComponentFactory.com
+//  Version 5.472.0.0 	www.ComponentFactory.com
 // *****************************************************************************
 
 using System;
@@ -15,10 +15,10 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("4.72.3.0")]
-[assembly: AssemblyFileVersion("4.72.3.0")]
-[assembly: AssemblyCopyright("© Component Factory Pty Ltd 2012. All rights reserved.")]
-[assembly: AssemblyInformationalVersion("4.72.3.0")]
+[assembly: AssemblyVersion("5.472.3.0")]
+[assembly: AssemblyFileVersion("5.472.3.0")]
+[assembly: AssemblyCopyright("© Component Factory Pty Ltd 2012 - 2019 - 2019. All rights reserved.")]
+[assembly: AssemblyInformationalVersion("5.472.3.0")]
 [assembly: AssemblyProduct("KryptonBorderEdge Examples")]
 [assembly: AssemblyDefaultAlias("KryptonBorderEdgeExamples.dll")]
 [assembly: AssemblyTitle("KryptonBorderEdge Examples")]
