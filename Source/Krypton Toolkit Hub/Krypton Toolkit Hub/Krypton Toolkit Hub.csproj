@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>KryptonToolkitHub</RootNamespace>
     <AssemblyName>Krypton Toolkit Hub</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Krypton Navigator">
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.72\Krypton Navigator.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\5.472\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit">
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.72\Krypton Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\5.472\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

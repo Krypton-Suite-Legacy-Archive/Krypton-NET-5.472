@@ -284,6 +284,9 @@
     <Compile Include="Palette Base\PaletteRedirect\PaletteRedirectBorderEdge.cs" />
     <Compile Include="Palette Base\PaletteRedirect\PaletteRedirectBorder.cs" />
     <Compile Include="Palette Base\PaletteElementColor\PaletteElementColor.cs" />
+    <Compile Include="Palette Builtin\PaletteOffice2007White.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Palette Builtin\PaletteOffice2013.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -293,7 +296,24 @@
     <Compile Include="Palette Builtin\PaletteOffice2013White.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice365Base.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice365Blue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice365Black.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice365Silver.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice365White.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Palette Controls\KryptonColorTable2013.cs" />
+    <Compile Include="Palette Controls\KryptonColorTable365.cs" />
+    <Compile Include="Palette Controls\KryptonColorTableOffice365.cs" />
     <Compile Include="Palette Controls\PaletteBackInheritNode.cs" />
     <Compile Include="Palette Controls\PaletteContentInheritNode.cs" />
     <Compile Include="Palette Controls\PaletteNodeOverride.cs" />
@@ -433,9 +453,16 @@
     <Compile Include="Palette Controls\PaletteDataGridViewTripleCommon.cs" />
     <Compile Include="Palette Controls\PaletteDataGridViewTripleRedirect.cs" />
     <Compile Include="Palette Controls\PaletteColorButtonStrings.cs" />
+    <Compile Include="Rendering\KryptonOffice2013Renderer.cs" />
+    <Compile Include="Rendering\KryptonOffice365Renderer.cs" />
+    <Compile Include="Rendering\RenderOffice2013.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rendering\RenderOffice365.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Rendering\Win10Glass\AccentColorService.cs" />
     <Compile Include="Rendering\Win10Glass\BlurWindowExtensions.cs" />
-    <Compile Include="Rendering\KryptonOffice2013Renderer.cs" />
     <Compile Include="Rendering\RenderExpertHelpers.cs" />
     <Compile Include="Rendering\RenderOffice2007.cs">
       <SubType>Component</SubType>
@@ -444,9 +471,6 @@
     <Compile Include="Rendering\KryptonProfessionalRenderer.cs" />
     <Compile Include="Rendering\KryptonSparkleRenderer.cs" />
     <Compile Include="Rendering\RenderDragDockingData.cs" />
-    <Compile Include="Rendering\RenderOffice2013.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Rendering\RenderSparkle.cs">
       <SubType>Component</SubType>
     </Compile>

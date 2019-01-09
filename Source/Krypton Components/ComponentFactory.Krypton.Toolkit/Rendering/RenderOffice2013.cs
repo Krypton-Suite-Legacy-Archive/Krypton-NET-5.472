@@ -1,6 +1,6 @@
 ﻿// *****************************************************************************
 // 
-//  © Component Factory Pty Ltd 2012 - 2019. All rights reserved.
+//  © Component Factory Pty Ltd 2012. All rights reserved.
 //	The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 17/267 Nepean Hwy, 
 //  Seaford, Vic 3198, Australia and are supplied subject to licence terms.
@@ -9,20 +9,16 @@
 // *****************************************************************************
 
 using System;
-using System.Text;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Drawing.Imaging;
-using System.Drawing.Drawing2D;
-using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
-	/// <summary>
-	/// Extends the professional renderer to provide Office2010 style additions.
-	/// </summary>
+    /// <summary>
+    /// Extends the professional renderer to provide Office2010 style additions.
+    /// </summary>
     public class RenderOffice2013 : RenderOffice2010
     {
         #region Static Fields
@@ -168,7 +164,7 @@ namespace ComponentFactory.Krypton.Toolkit
                 context.Graphics.DrawLine(cache.borderInnerPen, rect.X + 1, rect.Y, rect.X + 1, rect.Bottom - 1);
                 context.Graphics.DrawLine(cache.borderOuterPen, rect.Right - 1, rect.Y, rect.Right - 1, rect.Bottom - 1);
                 context.Graphics.DrawLine(cache.borderInnerPen, rect.Right - 2, rect.Y, rect.Right - 2, rect.Bottom - 1);
-            
+
                 // Draw the solid block of colour at the top
                 context.Graphics.FillRectangle(cache.topBrush, rect.X + 2, rect.Y, rect.Width - 4, 4);
 
@@ -481,7 +477,7 @@ namespace ComponentFactory.Krypton.Toolkit
 
                 // Fill the full background
                 //context.Graphics.FillPath(cache.outsideBrush, cache.outsidePath);
-                context.Graphics.FillRectangle(cache.outsideBrush,cache.rect);
+                context.Graphics.FillRectangle(cache.outsideBrush, cache.rect);
 
                 // Draw the border
                 //using (AntiAlias aa = new AntiAlias(context.Graphics))

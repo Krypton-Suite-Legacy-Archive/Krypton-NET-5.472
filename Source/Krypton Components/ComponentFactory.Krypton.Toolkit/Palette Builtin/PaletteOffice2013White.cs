@@ -1,6 +1,6 @@
 ﻿// *****************************************************************************
 // 
-//  © Component Factory Pty Ltd 2012 - 2019. All rights reserved.
+//  © Component Factory Pty Ltd 2012. All rights reserved.
 //	The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 17/267 Nepean Hwy, 
 //  Seaford, Vic 3198, Australia and are supplied subject to licence terms.
@@ -8,22 +8,14 @@
 //  Version 4.4.0.2 	www.ComponentFactory.com
 // *****************************************************************************
 
-using System;
-using System.Text;
 using System.Drawing;
-using System.Drawing.Text;
-using System.Drawing.Imaging;
-using System.Drawing.Drawing2D;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Diagnostics;
-using Microsoft.Win32;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
-	/// <summary>
-	/// Provides the White color scheme variant of the Office 2013 palette.
-	/// </summary>
+    /// <summary>
+    /// Provides the White color scheme variant of the Office 2013 palette.
+    /// </summary>
     public class PaletteOffice2013White : PaletteOffice2013Base
     {
         #region Static Fields
@@ -303,14 +295,14 @@ namespace ComponentFactory.Krypton.Toolkit
         /// Initialize a new instance of the PaletteOffice2010Silver class.
 		/// </summary>
         public PaletteOffice2013White()
-            : base(_schemeColors, 
-                   _checkBoxList, 
-                   _galleryButtonList, 
+            : base(_schemeColors,
+                   _checkBoxList,
+                   _galleryButtonList,
                    _radioButtonArray,
                    _trackBarColors)
         {
-		}
-		#endregion
+        }
+        #endregion
 
         #region Images
         /// <summary>
