@@ -6,16 +6,22 @@
 
 =======
 
+## 2019-02-11 Build 720 - Fix for drop shadow while using the ribbon component
+* Fix for [#5](https://github.com/Wagnerp/Krypton-NET-5.472/issues/5) courtesy of [richterAI](https://github.com/richterAl)
+* Build 720 (build date Tuesday 12th February, 2019) is now available on NuGet
+
+=======
+
 ## 2019-01-29 **`AccurateText.cs`** - Issue #75
-* Bugfix for [#75](https://github.com/Wagnerp/Krypton-NET-5.470/issues/75) courtesy of [nickfinch71](https://github.com/nickfinch71)
-* For more information about this issue on NT 6.0 systems, please read thread [#75](https://github.com/Wagnerp/Krypton-NET-5.470/issues/75)
+* Bugfix for [#75](https://github.com/Wagnerp/Krypton-NET-5.471/issues/75) courtesy of [nickfinch71](https://github.com/nickfinch71)
+* For more information about this issue on NT 6.0 systems, please read thread [#75](https://github.com/Wagnerp/Krypton-NET-5.471/issues/75)
 * NuGet package build 717 (build date Tuesday 29th January, 2019) will be made available
 
 =======
 
 ## 2019-01-03 Year Change
 * Changed `2018` to `2019` in code
-* Code parity with version `5.470`
+* Code parity with version `5.471`
 
 =======
 
