@@ -3,7 +3,7 @@
 //  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
-//  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
+//  Mornington, Vic 3931, Australia and are supplied subject to license terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
 //  Version 5.472.0.0  www.ComponentFactory.com
@@ -30,7 +30,7 @@ namespace ComponentFactory.Krypton.Toolkit
     [ToolboxBitmap(typeof(KryptonDataGridView), "ToolboxBitmaps.KryptonDataGridView.bmp")]
     [DesignerCategory("code")]
     [Designer(typeof(ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDesigner))]
-    [Description("Display rows and columns of data if a grid you can customize.")]
+    [Description("Display rows and columns of data of a grid you can customize.")]
     [ClassInterface(ClassInterfaceType.AutoDispatch)]
     [ComVisible(true)]
     public class KryptonDataGridView : DataGridView
@@ -1611,7 +1611,7 @@ namespace ComponentFactory.Krypton.Toolkit
 
         private void SetupViewAndStates()
         {
-            // Create the state storgate objects
+            // Create the state storage objects
             StateCommon = new PaletteDataGridViewRedirect(Redirector, NeedPaintDelegate);
             StateDisabled = new PaletteDataGridViewAll(StateCommon, NeedPaintDelegate);
             StateNormal = new PaletteDataGridViewAll(StateCommon, NeedPaintDelegate);
@@ -1729,7 +1729,7 @@ namespace ComponentFactory.Krypton.Toolkit
 
             // If the column headers default font is null or if the same as when we last
             // set the value then we do need to update with the latest value. Otherwise
-            // the programmer has modified the value and so leave it alone as overrriden.
+            // the programmer has modified the value and so leave it alone as over-ridden.
             if ((ColumnHeadersDefaultCellStyle.Font == null) ||
                 (ColumnHeadersDefaultCellStyle.Font.Equals(_columnFont)))
             {
@@ -2169,7 +2169,7 @@ namespace ComponentFactory.Krypton.Toolkit
                         // Layout cannot now be dirty
                         _layoutDirty = false;
 
-                        // Ask the view to peform a layout
+                        // Ask the view to perform a layout
                         ViewManager.Layout(Renderer);
 
                     } while (_layoutDirty && (max-- > 0));

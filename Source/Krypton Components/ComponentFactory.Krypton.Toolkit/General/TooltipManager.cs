@@ -3,7 +3,7 @@
 //  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
-//  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
+//  Mornington, Vic 3931, Australia and are supplied subject to license terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
 //  Version 5.472.0.0  www.ComponentFactory.com
@@ -33,9 +33,9 @@ namespace ComponentFactory.Krypton.Toolkit
         /// Occurs when a tooltip is required to be shown.
         /// </summary>
         public event EventHandler<ToolTipEventArgs> ShowToolTip;
-        
+
         /// <summary>
-        /// Ocurrs when the showing tooltip is no longer required.
+        /// Occurs when the showing tooltip is no longer required.
         /// </summary>
         public event EventHandler CancelToolTip;
         #endregion
@@ -137,7 +137,10 @@ namespace ComponentFactory.Krypton.Toolkit
                         }
                     }
                 }
-                catch { }
+                catch
+                {
+                    // ignored
+                }
             }
         }
 
@@ -158,9 +161,9 @@ namespace ComponentFactory.Krypton.Toolkit
         /// <param name="c">Reference to the source control instance.</param>
         /// <param name="pt">Mouse position relative to control.</param>
         /// <param name="button">Mouse button pressed down.</param>
-        public void MouseDown(ViewBase targetElement, 
-                              Control c, 
-                              Point pt, 
+        public void MouseDown(ViewBase targetElement,
+                              Control c,
+                              Point pt,
                               MouseButtons button)
         {
             // Stop any timers
@@ -186,9 +189,9 @@ namespace ComponentFactory.Krypton.Toolkit
         /// <param name="c">Reference to the source control instance.</param>
         /// <param name="pt">Mouse position relative to control.</param>
         /// <param name="button">Mouse button released.</param>
-        public void MouseUp(ViewBase targetElement, 
-                            Control c, 
-                            Point pt, 
+        public void MouseUp(ViewBase targetElement,
+                            Control c,
+                            Point pt,
                             MouseButtons button)
         {
         }
@@ -274,7 +277,9 @@ namespace ComponentFactory.Krypton.Toolkit
             _stopTimer.Stop();
 
             // Is the target is not the same as the currently showing tooltip
-            if (_currentTarget != _startTarget)
+            if ((_currentTarget != _startTarget)
+                || (_startTarget == null)   // SKC: Default tooltip not using a viewbase ??
+                )
             {
                 // Leave tooltips mode
                 _startTarget = null;
@@ -284,6 +289,7 @@ namespace ComponentFactory.Krypton.Toolkit
                 OnCancelToolTip();
 
                 // If we are over a new target then show straight away
+                // SKC: No Idea how this was supposed to work because the mouse leave will have set this to null !
                 if (_currentTarget != null)
                 {
                     // Enter showing tooltips mode

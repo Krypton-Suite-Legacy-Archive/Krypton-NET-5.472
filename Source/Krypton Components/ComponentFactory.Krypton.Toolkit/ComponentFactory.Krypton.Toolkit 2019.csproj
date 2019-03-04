@@ -189,6 +189,7 @@
     <Compile Include="Converters\InputControlStyleConverter.cs" />
     <Compile Include="Converters\DataGridViewStyleConverter.cs" />
     <Compile Include="Converters\GridStyleConverter.cs" />
+    <Compile Include="Converters\PlacementModeConverter.cs" />
     <Compile Include="EventArgs\ButtonDragRectangleEventArgs.cs" />
     <Compile Include="EventArgs\ContextMenuArgs.cs" />
     <Compile Include="EventArgs\CloseReasonEventArgs.cs" />
@@ -461,6 +462,7 @@
     <Compile Include="Rendering\RenderOffice365.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Rendering\ThemeManager.cs" />
     <Compile Include="Rendering\Win10Glass\AccentColorService.cs" />
     <Compile Include="Rendering\Win10Glass\BlurWindowExtensions.cs" />
     <Compile Include="Rendering\RenderExpertHelpers.cs" />
@@ -764,6 +766,8 @@
     <Compile Include="Values\ContextMenuImages.cs" />
     <Compile Include="Values\ColorButtonValues.cs" />
     <Compile Include="Values\CaptionValues.cs" />
+    <Compile Include="Values\PopupPositionValues.cs" />
+    <Compile Include="Values\ToolTipValues.cs" />
     <Compile Include="Values\TreeViewImages.cs" />
     <Compile Include="Values\GalleryImages.cs" />
     <Compile Include="Values\DropDownButtonImages.cs" />
@@ -1332,7 +1336,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" BuildVersion_StartDate="2000/1/1" />
+      <UserProperties BuildVersion_StartDate="2000/1/1" DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

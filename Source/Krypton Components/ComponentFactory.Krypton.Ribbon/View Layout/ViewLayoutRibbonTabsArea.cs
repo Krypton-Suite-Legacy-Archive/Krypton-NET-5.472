@@ -3,7 +3,7 @@
 //  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
-//  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
+//  Mornington, Vic 3931, Australia and are supplied subject to license terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
 //  Version 5.472.0.0  www.ComponentFactory.com
@@ -798,7 +798,7 @@ namespace ComponentFactory.Krypton.Ribbon
                 {
                     IContentValues sourceContent = null;
                     LabelStyle toolTipStyle = LabelStyle.SuperTip;
-                    Rectangle screenRect = new Rectangle(e.ScreenPt, new Size(1, 1));
+                    Rectangle screenRect = new Rectangle(e.ControlMousePosition, new Size(1, 1));
 
                     // If the target is the application button
                     switch (e.Target)
@@ -991,9 +991,7 @@ namespace ComponentFactory.Krypton.Ribbon
 
                         // The popup tooltip control always adds on a border above/below so we negate that here.
                         screenRect.Height -= 20;
-
-                        // Show relative to the provided screen rectangle
-                        _visualPopupToolTip.ShowCalculatingSize(screenRect);
+                        _visualPopupToolTip.ShowRelativeTo(e.Target, screenRect.Location);
                     }
                 }
             }

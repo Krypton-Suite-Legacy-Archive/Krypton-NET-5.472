@@ -3,19 +3,20 @@
 //  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
-//  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
+//  Mornington, Vic 3931, Australia and are supplied subject to license terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
 //  Version 5.472.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
-using Microsoft.Win32;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+
+using Microsoft.Win32;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
@@ -1055,6 +1056,7 @@ namespace ComponentFactory.Krypton.Toolkit
             _comboBox.MeasureItem += OnComboBoxMeasureItem;
             _comboBox.TrackMouseEnter += OnComboBoxMouseChange;
             _comboBox.TrackMouseLeave += OnComboBoxMouseChange;
+            //AddTooltipControlsTo(_comboBox);
             _comboBox.DropDown += OnComboBoxDropDown;
             _comboBox.DropDownClosed += OnComboBoxDropDownClosed;
             _comboBox.DropDownStyleChanged += OnComboBoxDropDownStyleChanged;
@@ -1081,7 +1083,7 @@ namespace ComponentFactory.Krypton.Toolkit
             _comboHolder = new InternalPanel(this);
             _comboHolder.Controls.Add(_comboBox);
 
-            // Create the element that fills the remainder space and remembers fill rectange
+            // Create the element that fills the remainder space and remembers fill rectangle
             _layoutFill = new ViewLayoutFill(_comboHolder);
 
             // Create inner view for placing inside the drawing docker
@@ -2877,10 +2879,12 @@ namespace ComponentFactory.Krypton.Toolkit
                 if (_trackingMouseEnter)
                 {
                     OnTrackMouseEnter(EventArgs.Empty);
+                    OnMouseEnter(e);
                 }
                 else
                 {
                     OnTrackMouseLeave(EventArgs.Empty);
+                    OnMouseLeave(e);
                 }
             }
 
@@ -3014,9 +3018,7 @@ namespace ComponentFactory.Krypton.Toolkit
                                                                      CommonHelper.ContentStyleFromLabelStyle(toolTipStyle));
 
                         _visualPopupToolTip.Disposed += OnVisualPopupToolTipDisposed;
-
-                        // Show relative to the provided screen rectangle
-                        _visualPopupToolTip.ShowCalculatingSize(RectangleToScreen(e.Target.ClientRectangle));
+                        _visualPopupToolTip.ShowRelativeTo(e.Target, e.ControlMousePosition);
                     }
                 }
             }

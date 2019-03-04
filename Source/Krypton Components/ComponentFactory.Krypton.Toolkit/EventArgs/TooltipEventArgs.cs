@@ -3,7 +3,7 @@
 //  © Component Factory Pty Ltd, 2006-2019, All rights reserved.
 // The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, 13 Swallows Close, 
-//  Mornington, Vic 3931, Australia and are supplied subject to licence terms.
+//  Mornington, Vic 3931, Australia and are supplied subject to license terms.
 // 
 //  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
 //  Version 5.472.0.0  www.ComponentFactory.com
@@ -11,7 +11,6 @@
 
 using System;
 using System.Drawing;
-using System.Diagnostics;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
@@ -20,23 +19,19 @@ namespace ComponentFactory.Krypton.Toolkit
 	/// </summary>
 	public class ToolTipEventArgs : EventArgs
 	{
-		#region Instance Fields
-
-	    #endregion
-
-		#region Identity
-		/// <summary>
-        /// Initialize a new instance of the ButtonSpecEventArgs class.
-		/// </summary>
+        #region Identity
+        /// <summary>
+        /// Initialize a new instance of the ToolTipEventArgs class.
+        /// </summary>
         /// <param name="target">Reference to view element that requires tooltip.</param>
-        /// <param name="screenPt">Screen location of mouse when tooltip was required.</param>
-        public ToolTipEventArgs(ViewBase target, Point screenPt)
+        /// <param name="controlMousePosition">Screen location of mouse when tooltip was required.</param>
+        public ToolTipEventArgs(ViewBase target, Point controlMousePosition)
 		{
-            Debug.Assert(target != null);
+            //Debug.Assert(target != null);
 
 			// Remember parameter details
             Target = target;
-            ScreenPt = screenPt;
+            ControlMousePosition = controlMousePosition;
 		}
 		#endregion
 
@@ -49,7 +44,7 @@ namespace ComponentFactory.Krypton.Toolkit
 	    /// <summary>
 		/// Gets the screen point of the mouse where tooltip is required.
 		/// </summary>
-        public Point ScreenPt { get; }
+        public Point ControlMousePosition { get; }
 
 	    #endregion
 	}
