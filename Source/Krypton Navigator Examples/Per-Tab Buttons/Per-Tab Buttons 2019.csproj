@@ -35,6 +35,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <TargetFrameworkProfile />
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <AssemblyVersion>19.3.5003.9</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,7 +98,7 @@
     <Content Include="Krypton.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5472">
+    <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.472.720</Version>
     </PackageReference>
   </ItemGroup>

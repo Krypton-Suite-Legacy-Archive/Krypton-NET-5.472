@@ -89,7 +89,7 @@
     <None Include="Resources\Square Design 128 x 128 New Green.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5472">
+    <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.472.720</Version>
     </PackageReference>
   </ItemGroup>

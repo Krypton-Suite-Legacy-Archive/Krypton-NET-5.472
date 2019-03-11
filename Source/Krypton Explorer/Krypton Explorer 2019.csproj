@@ -108,7 +108,7 @@
     <Content Include="Krypton.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5472">
+    <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.472.741</Version>
     </PackageReference>
   </ItemGroup>

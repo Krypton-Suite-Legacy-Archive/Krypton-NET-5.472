@@ -80,7 +80,7 @@
             this.propertyGrid.Location = new System.Drawing.Point(6, 19);
             this.propertyGrid.Name = "propertyGrid";
             this.propertyGrid.SelectedObject = this.kryptonTreeView;
-            this.propertyGrid.Size = new System.Drawing.Size(278, 472);
+            this.propertyGrid.Size = new System.Drawing.Size(278, 470);
             this.propertyGrid.TabIndex = 0;
             this.propertyGrid.ToolbarVisible = false;
             // 

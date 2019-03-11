@@ -866,7 +866,7 @@
             this.kryptonPage2.Size = new System.Drawing.Size(492, 290);
             this.kryptonPage2.Text = "Application Examples";
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage2.UniqueName = "4722B7548CB44C0C4722B7548CB44C0C";
+            this.kryptonPage2.UniqueName = "4702B7548CB44C0C4702B7548CB44C0C";
             // 
             // linkInputForm
             // 

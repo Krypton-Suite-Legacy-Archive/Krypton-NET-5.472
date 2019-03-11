@@ -1,24 +1,24 @@
 ﻿// *****************************************************************************
 // 
-//  © Component Factory Pty Ltd 2012 - 2019 - 2019. All rights reserved.
+//  © Component Factory Pty Ltd 2012 - 2019. All rights reserved.
 //	The software and associated documentation supplied hereunder are the 
 //  proprietary information of Component Factory Pty Ltd, PO Box 1504, 
 //  Glen Waverley, Vic 3150, Australia and are supplied subject to licence terms.
 // 
-//  Version 4.5.0.0 	www.ComponentFactory.com
+//  Modifications by Peter Wagner(aka Wagnerp) & Simon Coghlan(aka Smurf-IV) 2017 - 2019. All rights reserved. (https://github.com/Wagnerp/Krypton-NET-5.472)
+//  Version 5.472.0.0  www.ComponentFactory.com
+//
 // *****************************************************************************
 
 using System;
-using System.Text;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Diagnostics;
-using ComponentFactory.Krypton.Toolkit;
-using ComponentFactory.Krypton.Navigator;
-using ComponentFactory.Krypton.Workspace;
+
 using ComponentFactory.Krypton.Docking;
+using ComponentFactory.Krypton.Navigator;
+using ComponentFactory.Krypton.Toolkit;
+using ComponentFactory.Krypton.Workspace;
 
 namespace StandardDocking
 {
@@ -43,15 +43,15 @@ namespace StandardDocking
 
         private KryptonPage NewInput()          
         { 
-            return NewPage("Input ", 1, new ContentInput()); 
+            return NewPage("Input ", 1, new ContentInput(), null); 
         }
         
         private KryptonPage NewPropertyGrid()   
         { 
-            return NewPage("Properties ", 2, new ContentPropertyGrid()); 
+            return NewPage("Properties ", 2, new ContentPropertyGrid(), new Size(300, 300)); 
         }
 
-        private KryptonPage NewPage(string name, int image, Control content)
+        private KryptonPage NewPage(string name, int image, Control content, Size ?autoHiddenSizeHint = null)
         {
             // Create new page with title and image
             KryptonPage p = new KryptonPage
@@ -67,6 +67,10 @@ namespace StandardDocking
             p.Controls.Add(content);
 
             _count++;
+            if (autoHiddenSizeHint.HasValue)
+            {
+                p.AutoHiddenSlideSize = autoHiddenSizeHint.Value;
+            }
             return p;
         }
 
@@ -319,7 +323,9 @@ namespace StandardDocking
 
         private void kryptonDockableWorkspace_WorkspaceCellAdding(object sender, WorkspaceCellEventArgs e)
         {
-            e.Cell.Button.CloseButtonAction = CloseButtonAction.HidePage;
+            //e.Cell.Button.CloseButtonAction = CloseButtonAction.HidePage;
+            //e.Cell.Button.CloseButtonAction = CloseButtonAction.RemovePage;
+            e.Cell.Button.CloseButtonAction = CloseButtonAction.RemovePageAndDispose;
         }
 
         private void UpdatePaletteButtons()
