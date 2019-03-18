@@ -6,6 +6,11 @@
 
 =======
 
+## 2019-03-18 Build 794
+* Build 794 (build date Monday 18th March, 2019) is now available on NuGet
+
+=======
+
 ## 2019-03-11 Build 791
 * Fix for [#39](https://github.com/Wagnerp/Krypton-NET-5.470/issues/39)
 * Fix for [#74](https://github.com/Wagnerp/Krypton-NET-5.470/issues/74)

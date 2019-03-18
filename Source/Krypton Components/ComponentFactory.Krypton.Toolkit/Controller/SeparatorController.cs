@@ -817,6 +817,9 @@ namespace ComponentFactory.Krypton.Toolkit
 
     {
         #region Types
+        /// <summary>
+        /// 
+        /// </summary>
         public class SeparatorIndicator : Form
         {
             #region Instance Fields
@@ -920,6 +923,7 @@ namespace ComponentFactory.Krypton.Toolkit
         private SeparatorMessageFilter _filter;
         private ISeparatorSource _source;
         private SeparatorIndicator _indicator;
+        private KryptonPalette _palette = new KryptonPalette();
         #endregion
 
         #region Identity
