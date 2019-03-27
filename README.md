@@ -2,6 +2,12 @@
 
 =======
 
+| NuGet | Current NuGet Version | Github License |
+|---|---|---|
+| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20.NET%205.472-green.svg)](https://www.nuget.org/packages/KryptonToolkitSuite5472/) | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472.svg)| ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) | 
+
+=======
+
 # ["Toolkit help index"](https://rawgit.com/Wagnerp/Krypton-NET-4.7/master/Help/Output/index.html)
 
 =======
