@@ -24,12 +24,12 @@ namespace TestApp
             this.kryptonRibbon1.Name = "kryptonRibbon1";
             this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = null;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1382, 114);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1379, 114);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // RibbonTest
             // 
-            this.ClientSize = new System.Drawing.Size(1382, 614);
+            this.ClientSize = new System.Drawing.Size(1379, 631);
             this.Controls.Add(this.kryptonRibbon1);
             this.Name = "RibbonTest";
             this.UseDropShadow = false;

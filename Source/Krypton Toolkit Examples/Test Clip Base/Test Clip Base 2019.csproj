@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Test_Clip_Base</RootNamespace>
     <AssemblyName>Test Clip Base</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -86,7 +86,7 @@
     <None Include="Resources\Krypton.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5470">
+    <PackageReference Include="KryptonToolkitSuite5472">
       <Version>5.472.720</Version>
     </PackageReference>
   </ItemGroup>

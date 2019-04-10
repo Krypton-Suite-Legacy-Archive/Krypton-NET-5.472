@@ -21,7 +21,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -127,7 +127,7 @@
     <Compile Include="Controller\MenuLinkLabelController.cs" />
     <Compile Include="Controller\MenuItemController.cs" />
     <Compile Include="Controller\RadioButtonController.cs" />
-    <Compile Include="Controls Toolkit\DataGridViewButtonSpecClickEventArgs.cs" />
+    <Compile Include="EventArgs\DataGridViewButtonSpecClickEventArgs.cs" />
     <Compile Include="Controls Toolkit\KryptonByteViewer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -209,7 +209,7 @@
     <Compile Include="Controls Toolkit\KryptonRichTextBox.cs" />
     <Compile Include="Controls Toolkit\KryptonComboBox.cs" />
     <Compile Include="Controls Toolkit\KryptonDataGridView.cs" />
-    <Compile Include="Controls Toolkit\DataGridViewColumnSpecCollection.cs" />
+    <Compile Include="General\DataGridViewColumnSpecCollection.cs" />
     <Compile Include="Controls Toolkit\KryptonRadioButton.cs" />
     <Compile Include="Controls Toolkit\KryptonCheckBox.cs" />
     <Compile Include="Controls Toolkit\KryptonForm.cs">
@@ -330,6 +330,9 @@
     <Compile Include="Palette Base\PaletteRedirect\PaletteRedirectBorder.cs" />
     <Compile Include="Palette Base\PaletteElementColor\PaletteElementColor.cs" />
     <Compile Include="Palette Builtin\PaletteOffice2007White.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Palette Builtin\PaletteOffice2010White.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Palette Builtin\PaletteOffice2013.cs">

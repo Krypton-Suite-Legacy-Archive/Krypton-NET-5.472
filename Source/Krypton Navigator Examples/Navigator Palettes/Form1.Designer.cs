@@ -126,7 +126,7 @@ namespace NavigatorPalettes
             this.kryptonPage3.Size = new System.Drawing.Size(376, 222);
             this.kryptonPage3.Text = "Page 3";
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage3.UniqueName = "06E429CAACE4494506E429CAACE44945";
+            this.kryptonPage3.UniqueName = "06E429CAACE4494726E429CAACE44945";
             // 
             // kryptonPage4
             // 

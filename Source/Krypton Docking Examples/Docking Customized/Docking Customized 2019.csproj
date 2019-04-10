@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4715FA62-377A-4BF8-952B-EA9E96927E8B}</ProjectGuid>
+    <ProjectGuid>{4725FA62-377A-4BF8-952B-EA9E96927E8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DockingCustomized</RootNamespace>
     <AssemblyName>Docking Customized</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Krypton.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -124,7 +124,7 @@
     <Content Include="Krypton.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5470">
+    <PackageReference Include="KryptonToolkitSuite5472">
       <Version>5.472.720</Version>
     </PackageReference>
   </ItemGroup>

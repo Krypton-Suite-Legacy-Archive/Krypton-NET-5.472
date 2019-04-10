@@ -570,7 +570,7 @@ namespace OutlookMockup
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.kryptonPanelMain);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(712, 450);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(712, 472);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 24);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -589,7 +589,7 @@ namespace OutlookMockup
             this.kryptonPanelMain.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanelMain.Name = "kryptonPanelMain";
             this.kryptonPanelMain.Padding = new System.Windows.Forms.Padding(4);
-            this.kryptonPanelMain.Size = new System.Drawing.Size(712, 450);
+            this.kryptonPanelMain.Size = new System.Drawing.Size(712, 472);
             this.kryptonPanelMain.TabIndex = 0;
             // 
             // kryptonSplitContainerMain

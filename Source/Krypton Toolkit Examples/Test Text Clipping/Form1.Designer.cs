@@ -116,7 +116,7 @@ namespace ThreePaneApplication
             this.kryptonPanelMain.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanelMain.Name = "kryptonPanelMain";
             this.kryptonPanelMain.Padding = new System.Windows.Forms.Padding(4);
-            this.kryptonPanelMain.Size = new System.Drawing.Size(711, 471);
+            this.kryptonPanelMain.Size = new System.Drawing.Size(711, 472);
             this.kryptonPanelMain.TabIndex = 0;
             // 
             // kryptonHeaderGroupDetails
@@ -811,7 +811,7 @@ namespace ThreePaneApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 471);
+            this.ClientSize = new System.Drawing.Size(711, 472);
             this.Controls.Add(this.kryptonPanelMain);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

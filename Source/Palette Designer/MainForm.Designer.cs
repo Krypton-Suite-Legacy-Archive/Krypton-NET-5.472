@@ -1412,7 +1412,7 @@ namespace PaletteDesigner
             this.buttonSpecAny28.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.buttonSpecAny28.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.buttonSpecAny28.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.ArrowDown;
-            this.buttonSpecAny28.UniqueName = "5C9E40DBFF67470B5C9E40DBFF67470B";
+            this.buttonSpecAny28.UniqueName = "5C9E40DBFF67472B5C9E40DBFF67472B";
             // 
             // buttonSpecAny27
             // 
@@ -2872,7 +2872,7 @@ namespace PaletteDesigner
             this.kryptonGridList.Text = "List";
             this.kryptonGridList.TextDescription = "List is the default grid style.";
             this.kryptonGridList.ToolTipTitle = "Page ToolTip";
-            this.kryptonGridList.UniqueName = "7E5F74E3999D471E7E5F74E3999D471E";
+            this.kryptonGridList.UniqueName = "7E5F74E3999D472E7E5F74E3999D472E";
             // 
             // kryptonGridSheet
             // 
@@ -4763,7 +4763,7 @@ namespace PaletteDesigner
             this.pageSeparatorLowProfile.Text = "Low";
             this.pageSeparatorLowProfile.TextDescription = "Low Profile style is a low visibility display of a separator.";
             this.pageSeparatorLowProfile.ToolTipTitle = "Page ToolTip";
-            this.pageSeparatorLowProfile.UniqueName = "7E5F74E3999D471E7E5F74E3999D471E";
+            this.pageSeparatorLowProfile.UniqueName = "7E5F74E3999D472E7E5F74E3999D472E";
             // 
             // pageSeparatorHighProfile
             // 

@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace ComponentFactory.Krypton.Toolkit
 {
-	/// <summary>
-	/// Provides the Silver color scheme variant of the Office 2010 palette.
-	/// </summary>
+    /// <summary>
+    /// Provides the Silver color scheme variant of the Office 2010 palette.
+    /// </summary>
     public class PaletteOffice2010Silver : PaletteOffice2010Base
     {
         #region Static Fields
@@ -30,14 +30,14 @@ namespace ComponentFactory.Krypton.Toolkit
         private static readonly Image _formMax = Properties.Resources._2010ButtonMax;
         private static readonly Image _formMin = Properties.Resources._2010ButtonMin;
         private static readonly Image _formRestore = Properties.Resources._2010ButtonRestore;
-        private static readonly Color[] _trackBarColors = { Color.FromArgb(170, 170, 170),      // Tick marks
+        private static readonly Color[] _trackBarColors = new Color[] { Color.FromArgb(170, 170, 170),      // Tick marks
                                                                         Color.FromArgb(166, 170, 175),      // Top track
                                                                         Color.FromArgb(226, 220, 235),      // Bottom track
                                                                         Color.FromArgb(206, 200, 215),      // Fill track
                                                                         Color.FromArgb(64, Color.White),    // Outside position
                                                                         Color.FromArgb(80, 81, 82)          // Border (normal) position
                                                                       };
-        private static readonly Color[] _schemeColors = { Color.FromArgb( 59,  59,  59),    // TextLabelControl
+        private static readonly Color[] _schemeColors = new Color[] { Color.FromArgb( 59,  59,  59),    // TextLabelControl
                                                                       Color.FromArgb( 59,  59,  59),    // TextButtonNormal
                                                                       Color.Black,                      // TextButtonChecked
                                                                       Color.FromArgb(187, 191, 196),    // ButtonNormalBorder1
@@ -296,14 +296,14 @@ namespace ComponentFactory.Krypton.Toolkit
         /// Initialize a new instance of the PaletteOffice2010Silver class.
 		/// </summary>
         public PaletteOffice2010Silver()
-            : base(_schemeColors, 
-                   _checkBoxList, 
-                   _galleryButtonList, 
+            : base(_schemeColors,
+                   _checkBoxList,
+                   _galleryButtonList,
                    _radioButtonArray,
                    _trackBarColors)
         {
-		}
-		#endregion
+        }
+        #endregion
 
         #region Images
         /// <summary>
