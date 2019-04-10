@@ -12,6 +12,14 @@
 
 =======
 
+## Available Versions
+* [Krypton Toolkit Suite for .NET 4.5](https://github.com/Wagnerp/Krypton-NET-5.450)
+* [Krypton Toolkit Suite for .NET 4.7](https://github.com/Wagnerp/Krypton-NET-5.470)
+* [Krypton Toolkit Suite for .NET 4.7.1](https://github.com/Wagnerp/Krypton-NET-5.471)
+* [Krypton Toolkit Suite for .NET 4.8](https://github.com/Wagnerp/Krypton-NET-5.480)
+
+=======
+
 ## 2019-03-18 Build 794
 * Build 794 (build date Monday 18th March, 2019) is now available on NuGet
 
