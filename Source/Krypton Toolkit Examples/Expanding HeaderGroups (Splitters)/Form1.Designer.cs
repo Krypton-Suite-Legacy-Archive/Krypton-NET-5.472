@@ -200,7 +200,7 @@ namespace ExpandingHeaderGroupsSplitters
             // 
             this.kryptonSplitContainerHorizontal.Panel2.Controls.Add(this.kryptonSplitContainerVertical);
             this.kryptonSplitContainerHorizontal.Panel2MinSize = 100;
-            this.kryptonSplitContainerHorizontal.Size = new System.Drawing.Size(472, 299);
+            this.kryptonSplitContainerHorizontal.Size = new System.Drawing.Size(450, 299);
             this.kryptonSplitContainerHorizontal.SplitterDistance = 167;
             this.kryptonSplitContainerHorizontal.TabIndex = 0;
             // 

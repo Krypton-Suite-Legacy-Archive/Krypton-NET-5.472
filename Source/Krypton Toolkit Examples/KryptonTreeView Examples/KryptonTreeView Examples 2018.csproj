@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F52C6F54-67E8-4723-85DD-1E05116CCDB8}</ProjectGuid>
+    <ProjectGuid>{F52C6F54-67E8-4713-85DD-1E05116CCDB8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>KryptonTreeViewExamples</RootNamespace>

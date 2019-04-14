@@ -2872,7 +2872,7 @@ namespace PaletteDesigner
             this.kryptonGridList.Text = "List";
             this.kryptonGridList.TextDescription = "List is the default grid style.";
             this.kryptonGridList.ToolTipTitle = "Page ToolTip";
-            this.kryptonGridList.UniqueName = "7E5F74E3999D472E7E5F74E3999D472E";
+            this.kryptonGridList.UniqueName = "7E5F74E3999D471E7E5F74E3999D471E";
             // 
             // kryptonGridSheet
             // 
@@ -4763,7 +4763,7 @@ namespace PaletteDesigner
             this.pageSeparatorLowProfile.Text = "Low";
             this.pageSeparatorLowProfile.TextDescription = "Low Profile style is a low visibility display of a separator.";
             this.pageSeparatorLowProfile.ToolTipTitle = "Page ToolTip";
-            this.pageSeparatorLowProfile.UniqueName = "7E5F74E3999D472E7E5F74E3999D472E";
+            this.pageSeparatorLowProfile.UniqueName = "7E5F74E3999D471E7E5F74E3999D471E";
             // 
             // pageSeparatorHighProfile
             // 

@@ -9,12 +9,14 @@
 //  Version 4.7.0.0  www.ComponentFactory.com
 // *************************************************************************
 
-using ComponentFactory.Krypton.Toolkit;
-using KryptonExplorer.Properties;
 using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonExplorer.Properties;
 
 namespace KryptonExplorer
 {
@@ -886,10 +888,7 @@ namespace KryptonExplorer
 
             tslVersion.Text = $"Version: { _currentVersion.ToString() }";
 
-            foreach (string item in ThemeManager.SupportedThemeArray)
-            {
-                kcmbTheme.Items.Add(item);
-            }
+            ThemeManager.PropagateThemeSelector(kcmbTheme);
         }
 
         private void kbtnOpenApplicationPath_Click(object sender, EventArgs e)
@@ -909,11 +908,28 @@ namespace KryptonExplorer
 
         private void kbtnApplyTheme_Click(object sender, EventArgs e)
         {
-            ThemeManager.ApplyGlobalTheme(kryptonManager1, ThemeManager.ApplyThemeMode(kcmbTheme.Text));
+            ThemeManager.SetTheme(kcmbTheme.Text, kryptonManager1);
+
+            ThemeManager.ApplyGlobalTheme(kryptonManager1, ThemeManager.GetPaletteMode(kryptonManager1));
 
             Invalidate();
 
             kbtnApplyTheme.Enabled = false;
+        }
+
+        private void KbtnKryptonToolkitPackage_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.nuget.org/packages/KryptonToolkitSuite5472/");
+        }
+
+        private void KbtnKryptonExtendedToolkitPackage_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.nuget.org/packages/KryptonExtendedToolkit5472/");
+        }
+
+        private void KbtnKryptonDemoApplicationPackage_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.nuget.org/packages/KryptonToolkitSuite5472Demos/");
         }
     }
 }

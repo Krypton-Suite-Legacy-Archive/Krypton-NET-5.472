@@ -155,7 +155,7 @@ namespace ComponentFactory.Krypton.Toolkit
         /// Gets the palette mode.
         /// </summary>
         /// <param name="manager">The manager.</param>
-        /// <returns></returns>
+        /// <returns>The current <see cref="PaletteModeManager"/> mode.</returns>
         public static PaletteModeManager GetPaletteMode(KryptonManager manager)
         {
             return manager.GlobalPaletteMode;
@@ -289,8 +289,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -299,7 +298,7 @@ namespace ComponentFactory.Krypton.Toolkit
         /// </summary>
         /// <param name="paletteModeManager">The palette mode manager.</param>
         /// <param name="manager">The manager.</param>
-        /// <returns></returns>
+        /// <returns>The chosen theme as a string.</returns>
         public static string ReturnPaletteModeManagerAsString(PaletteModeManager paletteModeManager, KryptonManager manager = null)
         {
             string result = null;
@@ -528,7 +527,16 @@ namespace ComponentFactory.Krypton.Toolkit
                 manager = new KryptonManager();
 
                 // Prompt user for palette definition
-                palette.Import();
+
+                // TODO: Add silent option
+                if (silent)
+                {
+
+                }
+                else
+                {
+                    palette.Import();
+                }
 
                 // Set manager
                 manager.GlobalPalette = palette;
@@ -537,8 +545,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -682,8 +689,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -700,8 +706,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -720,8 +725,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -740,8 +744,7 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -760,9 +763,32 @@ namespace ComponentFactory.Krypton.Toolkit
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
+        }
+
+        /// <summary>
+        /// Applies the theme mode.
+        /// </summary>
+        /// <param name="themeName">Name of the theme.</param>
+        /// <returns>The <see cref="PaletteMode"/> equivalent.</returns>
+        public static PaletteMode ApplyThemeMode(string themeName)
+        {
+            PaletteMode mode = (PaletteMode)Enum.Parse(typeof(PaletteMode), themeName);
+
+            return mode;
+        }
+
+        /// <summary>
+        /// Applies the theme manager mode.
+        /// </summary>
+        /// <param name="themeName">Name of the theme.</param>
+        /// <returns>The <see cref="PaletteModeManager"/> equivalent.</returns>
+        public static PaletteModeManager ApplyThemeManagerMode(string themeName)
+        {
+            PaletteModeManager modeManager = (PaletteModeManager)Enum.Parse(typeof(PaletteModeManager), themeName);
+
+            return modeManager;
         }
         #endregion
     }
