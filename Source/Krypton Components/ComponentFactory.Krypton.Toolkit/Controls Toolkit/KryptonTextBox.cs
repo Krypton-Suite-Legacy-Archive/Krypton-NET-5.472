@@ -115,10 +115,10 @@ namespace ComponentFactory.Krypton.Toolkit
             {
                 switch (m.Msg)
                 {
-                    case PI.WM_NCHITTEST:
+                    case PI.WM_.NCHITTEST:
                         if (_kryptonTextBox.InTransparentDesignMode)
                         {
-                            m.Result = (IntPtr)PI.HTTRANSPARENT;
+                            m.Result = (IntPtr)PI.HT.TRANSPARENT;
                         }
                         else
                         {
@@ -126,14 +126,14 @@ namespace ComponentFactory.Krypton.Toolkit
                         }
 
                         break;
-                    case PI.WM_MOUSELEAVE:
+                    case PI.WM_.MOUSELEAVE:
                         // Mouse is not over the control
                         MouseOver = false;
                         _kryptonTextBox.PerformNeedPaint(true);
                         Invalidate();
                         base.WndProc(ref m);
                         break;
-                    case PI.WM_MOUSEMOVE:
+                    case PI.WM_.MOUSEMOVE:
                         // Mouse is over the control
                         if (!MouseOver)
                         {
@@ -143,8 +143,8 @@ namespace ComponentFactory.Krypton.Toolkit
                         }
                         base.WndProc(ref m);
                         break;
-                    case PI.WM_PRINTCLIENT:
-                    case PI.WM_PAINT:
+                    case PI.WM_.PRINTCLIENT:
+                    case PI.WM_.PAINT:
                         {
                             PI.PAINTSTRUCT ps = new PI.PAINTSTRUCT();
 
@@ -261,7 +261,7 @@ namespace ComponentFactory.Krypton.Toolkit
                             }
                         }
                         break;
-                    case PI.WM_CONTEXTMENU:
+                    case PI.WM_.CONTEXTMENU:
                         // Only interested in overriding the behavior when we have a krypton context menu...
                         if (_kryptonTextBox.KryptonContextMenu != null)
                         {
@@ -308,7 +308,7 @@ namespace ComponentFactory.Krypton.Toolkit
                 set
                 {
                     _hint = value;
-                    if (string.IsNullOrEmpty(Text) && !string.IsNullOrEmpty(Hint))
+                    if (string.IsNullOrEmpty(Text) && !string.IsNullOrWhiteSpace(Hint))
                     {
                         PI.SendMessage(Handle, PI.EM_SETCUEBANNER, (IntPtr)1, Hint);
                     }
@@ -578,6 +578,19 @@ namespace ComponentFactory.Krypton.Toolkit
         {
             get => _textBox.Hint;
             set => _textBox.Hint = value;
+        }
+
+        private bool ShouldSerializeHint()
+        {
+            return !string.IsNullOrWhiteSpace(Hint);
+        }
+
+
+        /// <summary>
+        /// </summary>
+        public void ResetHint()
+        {
+            Hint = string.Empty;
         }
 
         /// <summary>
@@ -1752,10 +1765,10 @@ namespace ComponentFactory.Krypton.Toolkit
         {
             switch (m.Msg)
             {
-                case PI.WM_NCHITTEST:
+                case PI.WM_.NCHITTEST:
                     if (InTransparentDesignMode)
                     {
-                        m.Result = (IntPtr)PI.HTTRANSPARENT;
+                        m.Result = (IntPtr)PI.HT.TRANSPARENT;
                     }
                     else
                     {
@@ -1763,7 +1776,7 @@ namespace ComponentFactory.Krypton.Toolkit
                     }
 
                     break;
-                case PI.WM_LBUTTONDOWN:
+                case PI.WM_.LBUTTONDOWN:
                     base.WndProc(ref m);
                     break;
                 default:

@@ -101,7 +101,6 @@ namespace ComponentFactory.Krypton.Toolkit
         private StatusStrip _statusStrip;
         private Bitmap _cacheBitmap;
         private Icon _cacheIcon;
-        private ShadowManager _shadowManager;
         #endregion
 
         #region Identity
@@ -192,15 +191,8 @@ namespace ComponentFactory.Krypton.Toolkit
 
             // Set the UseDropShadow to true
             UseDropShadow = true;
-            ShadowValues = new ShadowValues();
-            _shadowManager = new ShadowManager(this, ShadowValues);
-        }
 
-        [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            _shadowManager.WndProc(ref m);
+            AdministratorText = "Administrator";
         }
 
         /// <summary>
@@ -427,21 +419,6 @@ namespace ComponentFactory.Krypton.Toolkit
         private bool ShouldSerializeStateCommon() => !StateCommon.IsDefault;
 
         /// <summary>
-        /// Gets access to the button content.
-        /// </summary>
-        [Category("Visuals")]
-        [Description("Form Shadowing")]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
-        public ShadowValues ShadowValues { get; set; }
-
-        private bool ShouldSerializeShadowValues() => !ShadowValues.IsDefault;
-
-        /// <summary>
-        /// Resets the <see cref="KryptonForm"/> shadow values.
-        /// </summary>
-        public void ResetShadowValues() => ShadowValues.Reset();
-
-        /// <summary>
         /// Gets access to the inactive form appearance entries.
         /// </summary>
         [Category("Visuals")]
@@ -607,13 +584,13 @@ namespace ComponentFactory.Krypton.Toolkit
         {
             // Get the current window style (cannot use the 
             // WindowState property as it can be slightly out of date)
-            uint style = PI.GetWindowLong(Handle, PI.GWL_STYLE);
+            uint style = PI.GetWindowLong(Handle, PI.GWL_.STYLE);
 
-            if ((style & PI.WS_MINIMIZE) != 0)
+            if ((style & PI.WS_.MINIMIZE) != 0)
             {
                 return FormWindowState.Minimized;
             }
-            else if ((style & PI.WS_MAXIMIZE) != 0)
+            else if ((style & PI.WS_.MAXIMIZE) != 0)
             {
                 return FormWindowState.Maximized;
             }
@@ -942,38 +919,6 @@ namespace ComponentFactory.Krypton.Toolkit
             // Test if we need to change the custom chrome usage
             UpdateCustomChromeDecision();
         }
-
-        /// <summary>
-        /// Raises the Layout event.
-        /// </summary>
-        /// <param name="levent">An EventArgs that contains the event data.</param>
-        protected override void OnLayout(LayoutEventArgs levent)
-        {
-            // Let base class calculate fill rectangle
-            base.OnLayout(levent);
-
-            if (WindowState != FormWindowState.Normal)
-            {
-                return;
-            }
-            // Need a render context for accessing the renderer
-            //using (RenderContext context = new RenderContext(this, null, ClientRectangle, Renderer))
-            //{
-            //    // Grab a path that is the outside edge of the border
-            //    Rectangle borderRect = ClientRectangle;
-            //    GraphicsPath borderPath1 = Renderer.RenderStandardBorder.GetOutsideBorderPath(context, borderRect, _drawDocker.PaletteBorder, _drawDocker.Orientation, _drawDocker.State);
-            //    borderRect.Inflate(-1, -1);
-            //    GraphicsPath borderPath2 = Renderer.RenderStandardBorder.GetOutsideBorderPath(context, borderRect, _drawDocker.PaletteBorder, _drawDocker.Orientation, _drawDocker.State);
-            //    borderRect.Inflate(-1, -1);
-            //    GraphicsPath borderPath3 = Renderer.RenderStandardBorder.GetOutsideBorderPath(context, borderRect, _drawDocker.PaletteBorder, _drawDocker.Orientation, _drawDocker.State);
-
-            //    // Update the region of the popup to be the border path
-            //    Region = new Region(borderPath1);
-
-            //    // Inform the shadow to use the same paths for drawing the shadow
-            //    DefinePaths(borderPath1, borderPath2, borderPath3);
-            //}
-        }
         #endregion
 
         #region Protected Chrome
@@ -1018,7 +963,7 @@ namespace ComponentFactory.Krypton.Toolkit
 
             if ((CustomCaptionArea != null) && CustomCaptionArea.Contains(pt))
             {
-                return (IntPtr)PI.HTCAPTION;
+                return (IntPtr)PI.HT.CAPTION;
             }
 
             if (!composition)
@@ -1043,7 +988,7 @@ namespace ComponentFactory.Krypton.Toolkit
             // Do not allow the caption to be moved or the border resized
             if (InertForm)
             {
-                return (IntPtr)PI.HTCLIENT;
+                return (IntPtr)PI.HT.CLIENT;
             }
 
             using (ViewLayoutContext context = new ViewLayoutContext(this, Renderer))
@@ -1054,7 +999,7 @@ namespace ComponentFactory.Krypton.Toolkit
                     // Is the mouse over the image area
                     if (_drawContent.ImageRectangle(context).Contains(pt))
                     {
-                        return (IntPtr)PI.HTMENU;
+                        return (IntPtr)PI.HT.MENU;
                     }
                 }
             }
@@ -1101,7 +1046,7 @@ namespace ComponentFactory.Krypton.Toolkit
                         (pt.Y > borders.Top) &&
                         (pt.Y < (Height - borders.Bottom)))
                     {
-                        return (IntPtr)PI.HTCAPTION;
+                        return (IntPtr)PI.HT.CAPTION;
                     }
                 }
 
@@ -1113,15 +1058,15 @@ namespace ComponentFactory.Krypton.Toolkit
                     {
                         if (pt.Y <= HT_CORNER)
                         {
-                            return (IntPtr)PI.HTTOPLEFT;
+                            return (IntPtr)PI.HT.TOPLEFT;
                         }
 
                         if (pt.Y >= (Height - HT_CORNER))
                         {
-                            return (IntPtr)PI.HTBOTTOMLEFT;
+                            return (IntPtr)PI.HT.BOTTOMLEFT;
                         }
 
-                        return (IntPtr)PI.HTLEFT;
+                        return (IntPtr)PI.HT.LEFT;
                     }
 
                     // Is point over the right border?
@@ -1129,15 +1074,15 @@ namespace ComponentFactory.Krypton.Toolkit
                     {
                         if (pt.Y <= HT_CORNER)
                         {
-                            return (IntPtr)PI.HTTOPRIGHT;
+                            return (IntPtr)PI.HT.TOPRIGHT;
                         }
 
                         if (pt.Y >= (Height - HT_CORNER))
                         {
-                            return (IntPtr)PI.HTBOTTOMRIGHT;
+                            return (IntPtr)PI.HT.BOTTOMRIGHT;
                         }
 
-                        return (IntPtr)PI.HTRIGHT;
+                        return (IntPtr)PI.HT.RIGHT;
                     }
 
                     // Is point over the bottom border?
@@ -1145,15 +1090,15 @@ namespace ComponentFactory.Krypton.Toolkit
                     {
                         if (pt.X <= HT_CORNER)
                         {
-                            return (IntPtr)PI.HTBOTTOMLEFT;
+                            return (IntPtr)PI.HT.BOTTOMLEFT;
                         }
 
                         if (pt.X >= (Width - HT_CORNER))
                         {
-                            return (IntPtr)PI.HTBOTTOMRIGHT;
+                            return (IntPtr)PI.HT.BOTTOMRIGHT;
                         }
 
-                        return (IntPtr)PI.HTBOTTOM;
+                        return (IntPtr)PI.HT.BOTTOM;
                     }
 
                     // Is point over the top border?
@@ -1161,15 +1106,15 @@ namespace ComponentFactory.Krypton.Toolkit
                     {
                         if (pt.X <= HT_CORNER)
                         {
-                            return (IntPtr)PI.HTTOPLEFT;
+                            return (IntPtr)PI.HT.TOPLEFT;
                         }
 
                         if (pt.X >= (Width - HT_CORNER))
                         {
-                            return (IntPtr)PI.HTTOPRIGHT;
+                            return (IntPtr)PI.HT.TOPRIGHT;
                         }
 
-                        return (IntPtr)PI.HTTOP;
+                        return (IntPtr)PI.HT.TOP;
                     }
                 }
 
@@ -1763,7 +1708,7 @@ namespace ComponentFactory.Krypton.Toolkit
                     return false;
                 }
             }
-            catch (Exception exc)
+            catch
             {
                 return false;
             }

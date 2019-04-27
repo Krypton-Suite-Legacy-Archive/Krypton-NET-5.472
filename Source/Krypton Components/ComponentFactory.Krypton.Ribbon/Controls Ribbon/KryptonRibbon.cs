@@ -423,12 +423,9 @@ namespace ComponentFactory.Krypton.Ribbon
 
         #region Public Exposed Properties
         /// <summary>
-        /// Gets or sets if the ribbon is allowed to override form chrome by integrating instead with operating system chrome.
         /// </summary>
         [Category("Visuals")]
-        [Description("Is ribbon is allowed to override form chrome by integrating instead with operating system chrome.")]
-        //[DefaultValue(true)]
-        [DefaultValue(false)]
+        [Description("Integrate with operating system chrome instead of Krypton Palette")]
         public bool AllowFormIntegrate
         {
             get => _allowFormIntegrate;
@@ -441,6 +438,20 @@ namespace ComponentFactory.Krypton.Ribbon
                 }
             }
         }
+
+        private bool ShouldSerializeAllowFormIntegrate()
+        {
+            return _allowFormIntegrate;
+        }
+
+        /// <summary>
+        /// Resets the AllowFormIntegrate property to its default value.
+        /// </summary>
+        public void ResetAllowFormIntegrate()
+        {
+            _allowFormIntegrate = false;
+        }
+
 
         /// <summary>
         /// Gets or sets if the user is allowed to change the minimized mode.
@@ -1138,20 +1149,20 @@ namespace ComponentFactory.Krypton.Ribbon
             {
                 switch (m.Msg)
                 {
-                    case PI.WM_LBUTTONDOWN:
-                    case PI.WM_MBUTTONDOWN:
-                    case PI.WM_RBUTTONDOWN:
-                    case PI.WM_NCLBUTTONDOWN:
-                    case PI.WM_NCMBUTTONDOWN:
-                    case PI.WM_NCRBUTTONDOWN:
+                    case PI.WM_.LBUTTONDOWN:
+                    case PI.WM_.MBUTTONDOWN:
+                    case PI.WM_.RBUTTONDOWN:
+                    case PI.WM_.NCLBUTTONDOWN:
+                    case PI.WM_.NCMBUTTONDOWN:
+                    case PI.WM_.NCRBUTTONDOWN:
                         // Pressing the mouse in keyboard mode always kills keyboard mode
                         KillKeyboardMode();
                         break;
-                    case PI.WM_SYSKEYUP:
+                    case PI.WM_.SYSKEYUP:
                         CheckForAltUp();
                         break;
-                    case PI.WM_KEYDOWN:
-                    case PI.WM_SYSKEYDOWN:
+                    case PI.WM_.KEYDOWN:
+                    case PI.WM_.SYSKEYDOWN:
                         // Only interested if we are usable
                         if (Visible && Enabled)
                         {
@@ -1177,7 +1188,7 @@ namespace ComponentFactory.Krypton.Ribbon
                             }
                         }
                         break;
-                    case PI.WM_MOUSEWHEEL:
+                    case PI.WM_.MOUSEWHEEL:
                         // Only interested if we are usable and not in minimized mode or keyboard mode
                         if (Visible && Enabled && !RealMinimizedMode && !KeyboardMode && !InDesignMode)
                         {
@@ -1355,7 +1366,7 @@ namespace ComponentFactory.Krypton.Ribbon
         protected override void WndProc(ref Message m)
         {
             // Only interested in intercepting the hit testing
-            if (m.Msg == PI.WM_NCHITTEST)
+            if (m.Msg == PI.WM_.NCHITTEST)
             {
                 // Extract the screen point for the hit test
                 Point screenPoint = new Point((int)m.LParam.ToInt64());
@@ -1370,14 +1381,14 @@ namespace ComponentFactory.Krypton.Ribbon
                         // By returning transparent the hit test gets sent the window behind it which 
                         // will be the form itself, and so the existing form level hit testing will 
                         // occur that handles the min/max/close app button etc...
-                        m.Result = (IntPtr)PI.HTTRANSPARENT;
+                        m.Result = (IntPtr)PI.HT.TRANSPARENT;
                         return;
                     }
                 }
 
                 if (TabsArea?.LayoutTabs?.GetViewForSpare != null)
                 {
-                    // Conver the spare tabs area from child control coordinates to ribbon control coordinates
+                    // Convert the spare tabs area from child control coordinates to ribbon control coordinates
                     Rectangle spareRect = TabsArea.LayoutTabs.GetViewForSpare.ClientRectangle;
                     spareRect.Offset(TabsArea.TabsContainerControl.ChildControl.Location);
 
@@ -1385,7 +1396,7 @@ namespace ComponentFactory.Krypton.Ribbon
                     // that the form processing can then treat it as a caption area of the actual owning form
                     if (spareRect.Contains(clientPoint))
                     {
-                        m.Result = (IntPtr)PI.HTTRANSPARENT;
+                        m.Result = (IntPtr)PI.HT.TRANSPARENT;
                         return;
                     }
                 }
@@ -2730,7 +2741,7 @@ namespace ComponentFactory.Krypton.Ribbon
             ShowMinimizeButton = true;
             QATLocation = QATLocation.Above;
             QATUserChange = true;
-            AllowFormIntegrate = true;
+            ResetAllowFormIntegrate();
             LostFocusLosesKeyboard = true;
 
             BackStyle = PaletteBackStyle.PanelClient;

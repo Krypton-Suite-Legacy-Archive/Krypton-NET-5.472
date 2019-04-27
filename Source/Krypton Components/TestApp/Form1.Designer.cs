@@ -29,23 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues11 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues12 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnLoadTheme = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
@@ -61,6 +50,10 @@
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonSpecAny1 = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tscThemes = new System.Windows.Forms.ToolStripComboBox();
+            this.cmbThemes = new System.Windows.Forms.ComboBox();
+            this.dudThemes = new System.Windows.Forms.DomainUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -70,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbThemeCollection)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonManager1
@@ -91,6 +85,10 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.dudThemes);
+            this.kryptonPanel2.Controls.Add(this.cmbThemes);
+            this.kryptonPanel2.Controls.Add(this.toolStrip1);
+            this.kryptonPanel2.Controls.Add(this.kryptonTextBox2);
             this.kryptonPanel2.Controls.Add(this.kryptonButton3);
             this.kryptonPanel2.Controls.Add(this.kbtnLoadTheme);
             this.kryptonPanel2.Controls.Add(this.kryptonNavigator1);
@@ -109,6 +107,19 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(800, 450);
             this.kryptonPanel2.TabIndex = 0;
             // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Hint = "watermark / cue / hint";
+            this.kryptonTextBox2.Location = new System.Drawing.Point(25, 107);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(191, 23);
+            this.kryptonTextBox2.TabIndex = 19;
+            this.kryptonTextBox2.ToolTipValues.Description = "";
+            this.kryptonTextBox2.ToolTipValues.EnableToolTips = true;
+            this.kryptonTextBox2.ToolTipValues.Heading = "Water mark will dissapear once text is entered";
+            this.kryptonTextBox2.ToolTipValues.Image = null;
+            this.kryptonTextBox2.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
+            // 
             // kryptonButton3
             // 
             this.kryptonButton3.Location = new System.Drawing.Point(174, 338);
@@ -119,8 +130,6 @@
             this.kryptonButton3.ToolTipValues.EnableToolTips = true;
             this.kryptonButton3.ToolTipValues.Heading = "Apply Theme";
             this.kryptonButton3.ToolTipValues.Image = global::TestApp.Properties.Resources.Square_Design_32_x_32_New_Green;
-            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonButton3.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.kryptonButton3.Values.Text = "Show Small \r\nTooltip Form";
             this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
@@ -134,8 +143,6 @@
             this.kbtnLoadTheme.ToolTipValues.EnableToolTips = true;
             this.kbtnLoadTheme.ToolTipValues.Heading = "Apply Theme";
             this.kbtnLoadTheme.ToolTipValues.Image = global::TestApp.Properties.Resources.Square_Design_32_x_32_New_Green;
-            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnLoadTheme.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kbtnLoadTheme.Values.Text = "Load Theme";
             this.kbtnLoadTheme.Click += new System.EventHandler(this.kbtnLoadTheme_Click);
             // 
@@ -150,8 +157,6 @@
             this.kryptonNavigator1.Size = new System.Drawing.Size(197, 78);
             this.kryptonNavigator1.TabIndex = 13;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
-            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonNavigator1.ToolTipValues.ToolTipPosition = popupPositionValues3;
             // 
             // kryptonPage1
             // 
@@ -188,8 +193,6 @@
             this.kbtnApplyTheme.ToolTipValues.EnableToolTips = true;
             this.kbtnApplyTheme.ToolTipValues.Heading = "Apply Theme";
             this.kbtnApplyTheme.ToolTipValues.Image = global::TestApp.Properties.Resources.Square_Design_32_x_32_New_Green;
-            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnApplyTheme.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kbtnApplyTheme.Values.Text = "Apply Theme";
             this.kbtnApplyTheme.Click += new System.EventHandler(this.kbtnApplyTheme_Click);
             // 
@@ -200,8 +203,6 @@
             this.klbThemes.Size = new System.Drawing.Size(227, 184);
             this.klbThemes.TabIndex = 9;
             this.klbThemes.ToolTipValues.EnableToolTips = true;
-            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.klbThemes.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.klbThemes.SelectedIndexChanged += new System.EventHandler(this.klbThemes_SelectedIndexChanged);
             // 
             // kdbThemeCollection
@@ -211,8 +212,6 @@
             this.kdbThemeCollection.Size = new System.Drawing.Size(227, 22);
             this.kdbThemeCollection.TabIndex = 8;
             this.kdbThemeCollection.ToolTipValues.EnableToolTips = true;
-            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kdbThemeCollection.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kdbThemeCollection.SelectedItemChanged += new System.EventHandler(this.kdbThemeCollection_SelectedItemChanged);
             // 
             // kcmbThemeCollection
@@ -224,8 +223,6 @@
             this.kcmbThemeCollection.Size = new System.Drawing.Size(305, 21);
             this.kcmbThemeCollection.TabIndex = 6;
             this.kcmbThemeCollection.ToolTipValues.EnableToolTips = true;
-            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kcmbThemeCollection.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kcmbThemeCollection.SelectedIndexChanged += new System.EventHandler(this.kcmbThemeCollection_SelectedIndexChanged);
             // 
             // kryptonTextBox1
@@ -239,8 +236,7 @@
             this.kryptonTextBox1.ToolTipValues.Description = "Please type carefully -> Right";
             this.kryptonTextBox1.ToolTipValues.EnableToolTips = true;
             this.kryptonTextBox1.ToolTipValues.Heading = "This Text will explode";
-            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Right;
-            this.kryptonTextBox1.ToolTipValues.ToolTipPosition = popupPositionValues8;
+            this.kryptonTextBox1.ToolTipValues.ToolTipPosition.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Right;
             // 
             // kryptonCheckedListBox1
             // 
@@ -251,8 +247,7 @@
             this.kryptonCheckedListBox1.ToolTipValues.Description = "Description\r\nof\r\nTool\r\ntip\r\nMadness";
             this.kryptonCheckedListBox1.ToolTipValues.EnableToolTips = true;
             this.kryptonCheckedListBox1.ToolTipValues.Heading = "Checked List Box";
-            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Center;
-            this.kryptonCheckedListBox1.ToolTipValues.ToolTipPosition = popupPositionValues9;
+            this.kryptonCheckedListBox1.ToolTipValues.ToolTipPosition.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Center;
             // 
             // kryptonBorderEdge1
             // 
@@ -264,8 +259,6 @@
             this.kryptonBorderEdge1.ToolTipValues.Description = "Because you can.. -> Bottom";
             this.kryptonBorderEdge1.ToolTipValues.EnableToolTips = true;
             this.kryptonBorderEdge1.ToolTipValues.Heading = "Why";
-            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonBorderEdge1.ToolTipValues.ToolTipPosition = popupPositionValues10;
             // 
             // kryptonButton2
             // 
@@ -278,8 +271,7 @@
             this.kryptonButton2.TabIndex = 1;
             this.kryptonButton2.ToolTipValues.Description = "Description -> Top";
             this.kryptonButton2.ToolTipValues.EnableToolTips = true;
-            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Top;
-            this.kryptonButton2.ToolTipValues.ToolTipPosition = popupPositionValues11;
+            this.kryptonButton2.ToolTipValues.ToolTipPosition.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Top;
             this.kryptonButton2.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.KeyTip;
             this.kryptonButton2.Values.Text = "Test Movement of\r\ntooltip to other \r\ncontrol";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
@@ -292,8 +284,7 @@
             this.kryptonButton1.TabIndex = 0;
             this.kryptonButton1.ToolTipValues.Description = "Description -> Left";
             this.kryptonButton1.ToolTipValues.EnableToolTips = true;
-            popupPositionValues12.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Left;
-            this.kryptonButton1.ToolTipValues.ToolTipPosition = popupPositionValues12;
+            this.kryptonButton1.ToolTipValues.ToolTipPosition.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Left;
             this.kryptonButton1.Values.Text = "Ribbon Test";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
@@ -305,6 +296,38 @@
             this.buttonSpecAny1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.buttonSpecAny1.ToolTipTitle = "Title";
             this.buttonSpecAny1.UniqueName = "8D0C7B51F6A946484D932C2A06451172";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tscThemes});
+            this.toolStrip1.Location = new System.Drawing.Point(25, 148);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(135, 25);
+            this.toolStrip1.TabIndex = 21;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tscThemes
+            // 
+            this.tscThemes.Name = "tscThemes";
+            this.tscThemes.Size = new System.Drawing.Size(121, 25);
+            // 
+            // cmbThemes
+            // 
+            this.cmbThemes.FormattingEnabled = true;
+            this.cmbThemes.Location = new System.Drawing.Point(174, 148);
+            this.cmbThemes.Name = "cmbThemes";
+            this.cmbThemes.Size = new System.Drawing.Size(121, 21);
+            this.cmbThemes.TabIndex = 22;
+            // 
+            // dudThemes
+            // 
+            this.dudThemes.Location = new System.Drawing.Point(302, 148);
+            this.dudThemes.Name = "dudThemes";
+            this.dudThemes.Size = new System.Drawing.Size(120, 20);
+            this.dudThemes.TabIndex = 23;
             // 
             // Form1
             // 
@@ -318,6 +341,11 @@
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.ShadowValues.BlurDistance = 100D;
+            this.ShadowValues.Colour = System.Drawing.Color.Maroon;
+            this.ShadowValues.EnableShadows = true;
+            this.ShadowValues.ExtraWidth = ((sbyte)(-2));
+            this.ShadowValues.Opacity = 40D;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.Form1_HelpRequested);
@@ -331,6 +359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbThemeCollection)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -355,6 +385,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnLoadTheme;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripComboBox tscThemes;
+        private System.Windows.Forms.DomainUpDown dudThemes;
+        private System.Windows.Forms.ComboBox cmbThemes;
     }
 }
 
