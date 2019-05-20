@@ -457,7 +457,7 @@ namespace KryptonButtonExamples
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.propertyGrid);
-            this.groupBox4.Location = new System.Drawing.Point(470, 12);
+            this.groupBox4.Location = new System.Drawing.Point(472, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(301, 443);
             this.groupBox4.TabIndex = 5;

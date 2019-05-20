@@ -174,13 +174,15 @@ namespace ComponentFactory.Krypton.Toolkit
         #endregion
 
         #region Public
-        /// <summary>
-        /// Gets or sets the ContextMenuStrip associated with this control.
-        /// </summary>
+        /// <summary>Gets or sets the <see cref="T:System.Windows.Forms.ContextMenuStrip" /> associated with this control.</summary>
+        /// <returns>The <see cref="T:System.Windows.Forms.ContextMenuStrip" /> for this control, or <see langword="null" /> if there is no <see cref="T:System.Windows.Forms.ContextMenuStrip" />. The default is <see langword="null" />.</returns>
+        [Category("Behavior")]
+        [Description("Consider using KryptonContextMenu within the behaviors section.\nThe Winforms shortcut menu to show when the user right-clicks the page.\nNote: The ContextMenu will be rendered.")]
+        [DefaultValue(null)]
         public override ContextMenuStrip ContextMenuStrip
         {
             [DebuggerStepThrough]
-            get { return base.ContextMenuStrip; }
+            get => base.ContextMenuStrip;
 
             set 
             { 
@@ -203,11 +205,12 @@ namespace ComponentFactory.Krypton.Toolkit
             }
         }
 
+
         /// <summary>
         /// Gets and sets the KryptonContextMenu to show when right clicked.
         /// </summary>
         [Category("Behavior")]
-        [Description("The shortcut menu to show when the user right-clicks the page.")]
+        [Description("The KryptonContextMenu to show when the user right-clicks the Control.")]
         [DefaultValue(null)]
         public virtual KryptonContextMenu KryptonContextMenu
         {
@@ -268,7 +271,7 @@ namespace ComponentFactory.Krypton.Toolkit
                         // Layout cannot now be dirty
                         _layoutDirty = false;
 
-                        // Ask the view to peform a layout
+                        // Ask the view to perform a layout
                         ViewManager.Layout(Renderer);
 
                     } while (_layoutDirty && (max-- > 0));
@@ -284,13 +287,13 @@ namespace ComponentFactory.Krypton.Toolkit
         public PaletteMode PaletteMode
         {
             [DebuggerStepThrough]
-            get { return _paletteMode; }
+            get => _paletteMode;
 
             set
             {
                 if (_paletteMode != value)
                 {
-                    // Action despends on new value
+                    // Action depends on new value
                     switch (value)
                     {
                         case PaletteMode.Custom:
@@ -338,7 +341,7 @@ namespace ComponentFactory.Krypton.Toolkit
         public IPalette Palette
         {
             [DebuggerStepThrough]
-            get { return _localPalette; }
+            get => _localPalette;
 
             set
             {
@@ -549,16 +552,16 @@ namespace ComponentFactory.Krypton.Toolkit
             return ViewManager?.Root?.ViewFromPoint(pt);
         }
         #endregion
-        
+
         #region Protected
         /// <summary>
         /// Gets and sets the ViewManager instance.
         /// </summary>
-        protected ViewManager ViewManager
+        public ViewManager ViewManager
         {
             [DebuggerStepThrough]
-            get;
-            set;
+             get;
+             protected set;
         }
 
         /// <summary>
@@ -921,6 +924,10 @@ namespace ComponentFactory.Krypton.Toolkit
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnMouseEnter(EventArgs e)
         {
             // Cannot process a message for a disposed control
@@ -1120,7 +1127,7 @@ namespace ComponentFactory.Krypton.Toolkit
             // We only care if we are using the global palette
             if (PaletteMode == PaletteMode.Global)
             {
-                // Update ourself with the new global palette
+                // Update self with the new global palette
                 _localPalette = null;
                 SetPalette(KryptonManager.CurrentGlobalPalette);
                 Redirector.Target = _palette;
@@ -1183,7 +1190,7 @@ namespace ComponentFactory.Krypton.Toolkit
                     // Extract the screen mouse position (if might not actually be provided)
                     Point mousePt = new Point(PI.LOWORD(m.LParam), PI.HIWORD(m.LParam));
 
-                    // If keyboard activated, the menu position is centred
+                    // If keyboard activated, the menu position is centered
                     if (((int)((long)m.LParam)) == -1)
                     {
                         mousePt = new Point(Width / 2, Height / 2);

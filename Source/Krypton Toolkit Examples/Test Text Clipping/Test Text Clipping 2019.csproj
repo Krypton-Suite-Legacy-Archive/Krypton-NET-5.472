@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9497EDA8-5D49-4708-825D-FA52C6FDB962}</ProjectGuid>
+    <ProjectGuid>{9497EDA8-5D49-4728-825D-FA52C6FDB962}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestTextClipping</RootNamespace>
@@ -57,10 +57,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Toolkit, Version=5.472.872.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Bin\Krypton Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -102,6 +98,12 @@
   <ItemGroup>
     <Content Include="Krypton.ico" />
     <None Include="Resources\Databar_gradient_pink_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Krypton Components\ComponentFactory.Krypton.Toolkit\ComponentFactory.Krypton.Toolkit 2019.csproj">
+      <Project>{96ecaecc-54f8-4aa5-8591-b443c2d9565f}</Project>
+      <Name>ComponentFactory.Krypton.Toolkit 2019</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

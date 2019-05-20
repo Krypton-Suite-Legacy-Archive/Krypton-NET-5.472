@@ -16,6 +16,15 @@
 
 =======
 
+## 2019-05-20 Build 1103 - Bugfixes
+* Fixed issue [#179](https://github.com/Wagnerp/Krypton-NET-5.470/issues/179), KryptonTreeView with CheckBox and Image does not leave a "Gap"
+* Fixed issue [#176](https://github.com/Wagnerp/Krypton-NET-5.470/issues/176), Can not hide checkboxes for nodes in KryptonTreeView
+* Fixed issue [#148](https://github.com/Wagnerp/Krypton-NET-5.470/issues/148), Remove license demos & installer
+* Fixed issue [#140](https://github.com/Wagnerp/Krypton-NET-5.470/issues/130), Removed errant 2018 projects
+* Build 1103 (build date Monday 20th May, 2019) is now available on NuGet
+
+=======
+
 ## 2019-04-27 Build 968 - Bugfixes
 * Fixed issue [#147](https://github.com/Wagnerp/Krypton-NET-5.470/issues/147), hint does not have a designer reset option
 * Fixed issue [#146](https://github.com/Wagnerp/Krypton-NET-5.470/issues/146), PInvoke types should be structures and not classes

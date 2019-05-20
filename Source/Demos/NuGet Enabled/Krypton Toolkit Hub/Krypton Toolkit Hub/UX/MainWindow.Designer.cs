@@ -935,7 +935,7 @@
             this.kryptonPage2.Size = new System.Drawing.Size(1176, 512);
             this.kryptonPage2.Text = "Application Examples";
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage2.UniqueName = "4702B7548CB44C0C4702B7548CB44C0C";
+            this.kryptonPage2.UniqueName = "4722B7548CB44C0C4722B7548CB44C0C";
             // 
             // linkInputForm
             // 
@@ -1319,7 +1319,7 @@
             // linkAdvancedPageDragAndDrop
             // 
             this.linkAdvancedPageDragAndDrop.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
-            this.linkAdvancedPageDragAndDrop.Location = new System.Drawing.Point(17, 470);
+            this.linkAdvancedPageDragAndDrop.Location = new System.Drawing.Point(17, 472);
             this.linkAdvancedPageDragAndDrop.Name = "linkAdvancedPageDragAndDrop";
             this.linkAdvancedPageDragAndDrop.Size = new System.Drawing.Size(221, 26);
             this.linkAdvancedPageDragAndDrop.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
