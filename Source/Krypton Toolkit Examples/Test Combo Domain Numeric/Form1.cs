@@ -4,24 +4,15 @@
 //  Version 5.472.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
+using ComponentFactory.Krypton.Toolkit;
 
-
-using System;
-using System.Windows.Forms;
-
-namespace TestTextClipping
+namespace Test_Combo_Domain_Numeric
 {
-    static class Program
+    public partial class Form1 : KryptonForm
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        public Form1()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            InitializeComponent();
         }
     }
 }

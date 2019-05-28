@@ -4,12 +4,10 @@
 //  Version 5.472.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
-
-
 using System;
 using System.Windows.Forms;
 
-namespace TestTextClipping
+namespace Test_Combo_Domain_Numeric
 {
     static class Program
     {
