@@ -127,6 +127,7 @@
     <Compile Include="Controller\MenuLinkLabelController.cs" />
     <Compile Include="Controller\MenuItemController.cs" />
     <Compile Include="Controller\RadioButtonController.cs" />
+    <Compile Include="Controls Toolkit\KryptonGroupBoxPanel.cs" />
     <Compile Include="Controls Visuals\VisualShadowBase.cs" />
     <Compile Include="Designers\KryptonCheckButtonCollectionForm.cs">
       <SubType>Form</SubType>
