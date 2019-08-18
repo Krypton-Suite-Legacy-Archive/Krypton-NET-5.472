@@ -2,9 +2,13 @@
 
 =======
 
-| NuGet | Current NuGet Version | Github License |
+| Module Name | Current Version | Github License | 
 |---|---|---|
-| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20.NET%205.472-green.svg)](https://www.nuget.org/packages/KryptonToolkitSuite5472/) | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472.svg)| ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) | 
+| <img src="https://img.shields.io/badge/Module-Core-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472CoreModule) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) 
+| <img src="https://img.shields.io/badge/Module-Docking-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472DockingModule) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) |
+| <img src="https://img.shields.io/badge/Module-Navigator-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472NavigatorModule) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) |
+| <img src="https://img.shields.io/badge/Module-Ribbon-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472RibbonModule) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) |
+| <img src="https://img.shields.io/badge/Module-Workspace-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonToolkitSuite5472WorkspaceModule) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-NET-5.472.svg) |
 
 =======
 
