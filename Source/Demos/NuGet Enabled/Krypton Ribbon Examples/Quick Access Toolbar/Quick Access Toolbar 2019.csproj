@@ -117,6 +117,14 @@
     <None Include="Resources\flag_australia.png" />
     <None Include="Resources\flag_wales.png" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5472CoreModule">
+      <Version>5.472.1300</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5472RibbonModule">
+      <Version>5.472.826</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\Binaries\" /D /R /Y /S</PostBuildEvent>

@@ -103,6 +103,11 @@
     <Content Include="Krypton.ico" />
     <None Include="Resources\Databar_gradient_pink_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5472CoreModule">
+      <Version>5.472.1300</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\Binaries\" /D /R /Y /S</PostBuildEvent>
