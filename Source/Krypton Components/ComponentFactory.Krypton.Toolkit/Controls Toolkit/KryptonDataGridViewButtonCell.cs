@@ -131,7 +131,11 @@ namespace ComponentFactory.Krypton.Toolkit
                 bool pressed = currentCell && ((ButtonStateInternal & ButtonState.Pushed) == ButtonState.Pushed);
 
                 // Update the button state to reflect the tracking/pressed values
-                if (pressed)
+                if (base.ReadOnly)
+                {
+                    _viewButton.ElementState = PaletteState.Disabled;
+                }
+                else if (pressed)
                 {
                     _viewButton.ElementState = PaletteState.Pressed;
                 }
@@ -234,7 +238,11 @@ namespace ComponentFactory.Krypton.Toolkit
                         bool pressed = currentCell && ((ButtonStateInternal & ButtonState.Pushed) == ButtonState.Pushed);
 
                         // Update the button state to reflect the tracking/pressed values
-                        if (pressed)
+                        if (base.ReadOnly)
+                        {
+                            _viewButton.ElementState = PaletteState.Disabled;
+                        }
+                        else if (pressed)
                         {
                             _viewButton.ElementState = PaletteState.Pressed;
                         }
