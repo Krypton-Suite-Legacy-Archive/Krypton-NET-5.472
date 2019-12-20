@@ -151,5 +151,13 @@ namespace TestApp
 
             base.OnHandleCreated(e);
         }
+
+        private void kbtnInputBox_Click(object sender, EventArgs e)
+        {
+ KryptonInputBox.Show(this, "Test", "Hello World!", "Your answer here...");
+
+
+            //KryptonInputBox.Show(this, "Hello");
+        }
     }
 }

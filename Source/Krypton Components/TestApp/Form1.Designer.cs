@@ -60,6 +60,7 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnInputBox = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.knumWindowRounding = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonMaskedTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
@@ -117,6 +118,7 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnInputBox);
             this.kryptonPanel2.Controls.Add(this.kryptonTreeView1);
             this.kryptonPanel2.Controls.Add(this.knumWindowRounding);
             this.kryptonPanel2.Controls.Add(this.kryptonMaskedTextBox1);
@@ -143,6 +145,15 @@
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(800, 450);
             this.kryptonPanel2.TabIndex = 0;
+            // 
+            // kbtnInputBox
+            // 
+            this.kbtnInputBox.Location = new System.Drawing.Point(365, 388);
+            this.kbtnInputBox.Name = "kbtnInputBox";
+            this.kbtnInputBox.Size = new System.Drawing.Size(90, 25);
+            this.kbtnInputBox.TabIndex = 31;
+            this.kbtnInputBox.Values.Text = "Input Box";
+            this.kbtnInputBox.Click += new System.EventHandler(this.kbtnInputBox_Click);
             // 
             // kryptonTreeView1
             // 
@@ -462,6 +473,8 @@
             this.AllowButtonSpecToolTips = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BlurValues.BlurWhenFocusLost = true;
+            this.BlurValues.EnableBlur = true;
             this.BracketType = ComponentFactory.Krypton.Toolkit.BracketType.SQUAREBRACKET;
             this.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
             this.buttonSpecAny1});
@@ -528,6 +541,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox kryptonMaskedTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown knumWindowRounding;
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView kryptonTreeView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnInputBox;
     }
 }
 

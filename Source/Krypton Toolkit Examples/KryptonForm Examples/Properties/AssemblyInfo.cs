@@ -15,9 +15,9 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("5.472.4.0")]
-[assembly: AssemblyFileVersion("5.472.4.0")]
-[assembly: AssemblyInformationalVersion("5.472.4.0")]
+[assembly: AssemblyVersion("5.472.6.0")]
+[assembly: AssemblyFileVersion("5.472.6.0")]
+[assembly: AssemblyInformationalVersion("5.472.6.0")]
 [assembly: AssemblyCopyright("© Component Factory Pty Ltd 2012 - 2019. All rights reserved.")]
 [assembly: AssemblyProduct("KryptonForm Examples")]
 [assembly: AssemblyDefaultAlias("KryptonFormExamples.dll")]
@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 [assembly: StringFreezing]
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(true)]
-[assembly: AllowPartiallyTrustedCallers()]
+//[assembly: AllowPartiallyTrustedCallers()]
 [assembly: Dependency("System", LoadHint.Always)]
 [assembly: Dependency("System.Drawing", LoadHint.Always)]
 [assembly: Dependency("System.Windows.Forms", LoadHint.Always)]

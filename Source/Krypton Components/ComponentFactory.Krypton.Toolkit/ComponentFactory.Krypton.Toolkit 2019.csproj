@@ -128,6 +128,10 @@
     <Compile Include="Controller\MenuItemController.cs" />
     <Compile Include="Controller\RadioButtonController.cs" />
     <Compile Include="Controls Toolkit\KryptonGroupBoxPanel.cs" />
+    <Compile Include="Controls Toolkit\KryptonInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls Visuals\VisualBlur.cs" />
     <Compile Include="Controls Visuals\VisualShadowBase.cs" />
     <Compile Include="Designers\KryptonCheckButtonCollectionForm.cs">
       <SubType>Form</SubType>
@@ -177,7 +181,7 @@
     <Compile Include="Controls Toolkit\KryptonDataGridViewTextBoxEditingControl.cs" />
     <Compile Include="Controls Toolkit\KryptonTreeNode.cs" />
     <Compile Include="Controls Toolkit\KryptonTreeView.cs" />
-    <Compile Include="Controls Toolkit\KryptonInputBox.cs" />
+    <Compile Include="Controls Toolkit\KryptonInputBoxOld.cs" />
     <Compile Include="Controls Toolkit\KryptonTaskDialogCommand.cs" />
     <Compile Include="Controls Toolkit\KryptonTaskDialog.cs" />
     <Compile Include="Controls Visuals\ByteViewerForm.cs">
@@ -225,6 +229,7 @@
     <Compile Include="Controls Toolkit\KryptonRichTextBox.cs" />
     <Compile Include="Controls Toolkit\KryptonComboBox.cs" />
     <Compile Include="Controls Toolkit\KryptonDataGridView.cs" />
+    <Compile Include="General\BlurManager.cs" />
     <Compile Include="General\DataGridViewColumnSpecCollection.cs" />
     <Compile Include="Controls Toolkit\KryptonRadioButton.cs" />
     <Compile Include="Controls Toolkit\KryptonCheckBox.cs" />
@@ -640,6 +645,7 @@
     <Compile Include="Designers\KryptonWrapLabelDesigner.cs" />
     <Compile Include="Designers\PaletteDrawBordersEditor.cs" />
     <Compile Include="Utilities\PaletteImageScaler.cs" />
+    <Compile Include="Values\BlurValues.cs" />
     <Compile Include="Values\CheckBoxImages.cs" />
     <Compile Include="Palette Controls\PaletteHeaderButtonRedirect.cs" />
     <Compile Include="Palette Controls\PaletteFormRedirect.cs" />
@@ -930,6 +936,9 @@
     <Compile Include="View Draw\ViewDrawDocker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls Toolkit\KryptonInputBoxOld.resx">
+      <DependentUpon>KryptonInputBoxOld.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls Toolkit\KryptonInputBox.resx">
       <DependentUpon>KryptonInputBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -1404,7 +1413,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" BuildVersion_StartDate="2000/1/1" />
+      <UserProperties BuildVersion_StartDate="2000/1/1" DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
